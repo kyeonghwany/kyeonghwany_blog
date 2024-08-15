@@ -1,0 +1,401 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "portfolio",
+    "section": "",
+    "text": "안녕하세요, 데이터 분석가 김경환입니다. 저는 데이터를 통해 문제를 정의하고 다양한 데이터를 활용하여 문제를 해결하는 것에 관심이 있습니다.\n여러 프로젝트 및 사업을 통해 데이터 수집부터 데이터 표준화, 데이터 품질관리, 데이터 분석 및 서비스까지 일련의 과정을 진행한 경험이 있으며 이를 위해 다양한 툴을 활용하여 업무를 진행하고 있습니다.\n현재는 의료 마케팅 분야에서 데이터 분석을 하고 있습니다."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "portfolio",
+    "section": "contact",
+    "text": "contact\n\n📧 james160601@gmail.com\ngithub"
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "portfolio",
+    "section": "skills",
+    "text": "skills\n\nR | 데이터 분석\nPython | 데이터 분석, ML/DL\nSQL | 데이터 관리 및 추출\nNIFI | 데이터 수집 및 처리\nDA# | 데이터 관리\nQuarto | 데이터 활용 서비스"
+  },
+  {
+    "objectID": "about.html#project-list",
+    "href": "about.html#project-list",
+    "title": "portfolio",
+    "section": "Project list",
+    "text": "Project list\n\n김제 스마트팜 혁신밸리 데이터 수집 및 분석 | 2023.10 - 2024.04\n\n(주)좋은정보기술 연구개발팀 근무\n혁신밸리 데이터 수집, 처리, 적재 프로세스 구성\n온실 미기후 데이터 품질관리\n작물 생육 측정 데이터 품질관리\n수집 데이터 활용 분석 서비스 제공\n대시보드 설계\n\n\n\n전라북도 공공데이터 품질관리 | 2023.09 - 2023.11\n\n(주)좋은정보기술 연구개발팀 근무\n공공데이터 품질관리 수준평가 대응, 평가 결과 96점 달성\n업무담당자 대상 공공데이터 품질관리 교육\n24개 평가 대상 DB 품질진단 및 개선(표준, 구조, 연계, 값 진단 및 개선)\n개방데이터 품질 진단 및 개선\n프로젝트 상세\n\n\n\n고품질 농업 데이터 수집 및 분석 | 2023.06 - 2023.12\n\n(주)좋은정보기술 연구개발팀 근무\n온실 미기후 데이터 품질관리\n작물 생육 측정 데이터 품질관리\n수집 데이터 활용 분석(미기후 데이터 시계열 군집분석, 결측치 처리 모델)\n\n\n\n차량 이미지 정보 인식 개발 | 2022.07\n\n쏘카 실전 데이터로 배우는 AI 엔지니어 육성 부트캠프 2기\nPython, Pytorch\n차량 이미지에서 차량 부품별 인식\n차량 사진을 찍은 각도 추출 모델 개발\n프로젝트 상세\n\n\n\n우편서비스 배달업무환경 분석 | 2021.09 - 2022.02\n\n한국전자통신연구원 우정물류기술연구센터 인턴\n배달업무 평준화 및 운영 효율화 설계를 위한 배달업무환경 분석\n초과근무시간 예측을 위한 EDA 및 feature engineering\n초과근무시간 예측 모델링\n프로젝트 상세\n\n\n\n수출동향파악을 위한 수출물량 시계열 분석 | 2021.09 - 2022.02\n\n한국전자통신연구원 우정물류기술연구센터 인턴\n공공데이터 API를 이용한 수출물량 자동 수집기 개발\n주식시장 데이터, 경제지수 데이터 수집\n국가별 주요 수출 품목 시계열 분석\n프로젝트 상세\n\n\n\n작업복 세탁소 수요 예측 및 입지 분석 | 2021.07 - 2021.08\n\n공공빅데이터 청년 인턴십\n공장 위치정보 및 특성, 작업복 세탁량 데이터 전처리\n작업복 세탁소가 필요한 공장의 특성 도출\n공장별 작업복 세탁 수요 예측\n작업복 세탁소 최적 입지 시각화\n프로젝트 상세"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "김경환",
+    "section": "",
+    "text": "안녕하세요, 데이터 분석가 김경환입니다. 저는 데이터를 통해 문제를 정의하고 다양한 데이터를 활용하여 문제를 해결하는 것에 관심이 있습니다.\n여러 프로젝트를 통해 데이터 수집부터 데이터 표준화, 데이터 품질관리, 데이터 분석 및 서비스까지 일련의 과정을 진행한 경험이 있으며 이를 위해 다양한 툴을 활용하여 업무를 진행하고 있습니다.\n현재는 의료 마케팅 분야에서 데이터 분석을 하고 있습니다."
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "",
+    "text": "c드라이브에 R폴더 생성\n설치파일 다운로드\n\n\nR\nRstudio\nRtools\njdk\n\n\nR과 Rstudio는 C:\\R에 관리자권한으로 설치(기본값으로)\njdk, Rtools는 기본 경로에 설치(기본값으로)."
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#r설치jdk도-추가",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#r설치jdk도-추가",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "",
+    "text": "c드라이브에 R폴더 생성\n설치파일 다운로드\n\n\nR\nRstudio\nRtools\njdk\n\n\nR과 Rstudio는 C:\\R에 관리자권한으로 설치(기본값으로)\njdk, Rtools는 기본 경로에 설치(기본값으로)."
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#anaconda3-설치",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#anaconda3-설치",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "anaconda3 설치",
+    "text": "anaconda3 설치\n\nanaconda3 설치파일 다운로드 및 설치(기본값으로)"
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#vs-code-설치",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#vs-code-설치",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "VS code 설치",
+    "text": "VS code 설치\n\nvs code 설치링크\npath에 추가 옵션 선택"
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#window11에서-wsl을-이용해-linux-설치",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#window11에서-wsl을-이용해-linux-설치",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "window11에서 wsl을 이용해 linux 설치",
+    "text": "window11에서 wsl을 이용해 linux 설치\n\nms 공식 설명서1\nms 공식 설명서2\n\n\npowershell열고 다음을 입력하여 linux설치\n\nwsl --install\n설치 후 컴퓨터를 다시 시작\n\n사용자 이름 및 암호 설정\n\n컴퓨터를 다시 시작하면 바로 우분투 터미널 창이 열린다. 사용자 이름과 암호를 입력. 입력한 계정은 sudo 권한이 부여된다.\n\n패키지 업데이트 및 업그레이드\n\nsudo apt update && sudo apt upgrade\n\nvs code 확장팩 설치 및 연결\n\n\nremote dev 확장팩 설치\n우분투에서 code .을 입력하면 vs code로 연결됨\n윈도우 vs code에서 ctrl+shift+p를 통해서도 연결 가능"
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#우분투에서-r와-rstudio-server-설치",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#우분투에서-r와-rstudio-server-설치",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "우분투에서 R와 Rstudio-server 설치",
+    "text": "우분투에서 R와 Rstudio-server 설치\n\n참고자료, 변할 수 있으니 확인 (지금은 우분투 22.04)\n\nrstudio-server download\nR 설치 간편설명\nR 설치 설명\n\n\n\nR설치\n\n# update indices\nsudo apt update -qq\n# install two helper packages we need\nsudo apt install --no-install-recommends software-properties-common dirmngr\n# add the signing key (by Michael Rutter) for these repos\n# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \n# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9\nwget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc\n# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed\nsudo add-apt-repository \"deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/\"\nsudo apt install --no-install-recommends r-base\nsudo apt-get install r-base-dev\nsudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+\n$(lsb_release -cs) = jammy, 우분투22.04의 코드네임\n\nrstudio-server 설치\n\nsudo apt-get install gdebi-core\nwget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2023.03.1-446-amd64.deb\nsudo gdebi rstudio-server-2023.03.1-446-amd64.deb\n\n실행\n\nsudo rstudio-server start\n실행 후 http://{local ip주소}:8787/에 접속"
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#우분투에서-conda-설치",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#우분투에서-conda-설치",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "우분투에서 conda 설치",
+    "text": "우분투에서 conda 설치\n참고자료\n\nsystem repositories 업데이트\n\nsudo apt update\n\ncurl 패키지 설치\n\nsudo apt install curl -y\n\nanaconda 설치\n\n/tmp 디렉토리로 이동\ncd /tmp\n설치파일 다운로드, 여기서 원하는 버전 선택\ncurl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Linux-x86_64.sh\n‘SHA-256’ 다운로드\nsha256sum anaconda.sh\n설치 프로그램 실행\nbash anaconda.sh\n\n.bashrc에 변경된 환경설정 활성화\n\nsource ~/.bashrc\n\n설치 확인\n\nconda list\n\n기타 설정\n\n\nconda 설정 보기\n\nconda config --show\n\nconda 자동 활성화 모드 on/off\n\nconda config --set auto_activate_base {True/False}\n\nconda 실행/종료\n\nconda activate\nconda deactivate"
+  },
+  {
+    "objectID": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#conda에서-설치하고-싶은-패키지-검색",
+    "href": "posts/2023-06-05-computer_setting/2023-06-05_computer_setting.html#conda에서-설치하고-싶은-패키지-검색",
+    "title": "WSL, R, conda 설치 방법",
+    "section": "conda에서 설치하고 싶은 패키지 검색",
+    "text": "conda에서 설치하고 싶은 패키지 검색\n\nconda 패키지 검색"
+  },
+  {
+    "objectID": "posts/2023-07-05-git_with_rstudio/2023-07-05-git_with_rstudio.html",
+    "href": "posts/2023-07-05-git_with_rstudio/2023-07-05-git_with_rstudio.html",
+    "title": "git, github, Rstudio 연동하기",
+    "section": "",
+    "text": "먼저 git설치 및 github계정 생성 후 git bash에서 본인의 이메일과 이름을 입력합니다.\ngit config --global user.email \"you@example.com\"\ngit config --global user.name \"Your Name\""
+  },
+  {
+    "objectID": "posts/2023-07-05-git_with_rstudio/2023-07-05-git_with_rstudio.html#git-설치-및-계정-입력",
+    "href": "posts/2023-07-05-git_with_rstudio/2023-07-05-git_with_rstudio.html#git-설치-및-계정-입력",
+    "title": "git, github, Rstudio 연동하기",
+    "section": "",
+    "text": "먼저 git설치 및 github계정 생성 후 git bash에서 본인의 이메일과 이름을 입력합니다.\ngit config --global user.email \"you@example.com\"\ngit config --global user.name \"Your Name\""
+  },
+  {
+    "objectID": "posts/2023-07-05-git_with_rstudio/2023-07-05-git_with_rstudio.html#github-연결",
+    "href": "posts/2023-07-05-git_with_rstudio/2023-07-05-git_with_rstudio.html#github-연결",
+    "title": "git, github, Rstudio 연동하기",
+    "section": "github 연결",
+    "text": "github 연결\n본인의 git을 github과 연결하기 위해서는 shh키를 생성하여 연결해야 합니다. 여러 방법이 있겠지만 Rstudio를 사용한다면 쉽게 연결할 수 있습니다.\n\nrstudio에서 연결하는 방법\n\nrstudio &gt; Tools &gt; Global Options &gt; Git.SVN에서 ssh키 생성하고,\ngithub계정에 ssh키 등록합니다.\n\n\n\n터미널에서 연결하는 방법\ncd ~\nssh-keygen\ncd ~/.ssh\ncat id_rsa.pub\n이후 나타난 문자열을 복사하여 github에 등록합니다."
+  },
+  {
+    "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html",
+    "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html",
+    "title": "GitHub Pages기능을 이용해 Quarto 배포",
+    "section": "",
+    "text": "https://quarto.org/docs/publishing/에서 여러 방식으로 quarto를 배포하는 방법을 소개하고 있습니다. 이번 글에서는 github pages 기능을 이용하여 배포하는 방법을 정리해봤습니다."
+  },
+  {
+    "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#quarto-웹사이트를-배포하는-방법",
+    "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#quarto-웹사이트를-배포하는-방법",
+    "title": "GitHub Pages기능을 이용해 Quarto 배포",
+    "section": "",
+    "text": "https://quarto.org/docs/publishing/에서 여러 방식으로 quarto를 배포하는 방법을 소개하고 있습니다. 이번 글에서는 github pages 기능을 이용하여 배포하는 방법을 정리해봤습니다."
+  },
+  {
+    "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#렌더링-되는-디렉토리-이름-변경",
+    "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#렌더링-되는-디렉토리-이름-변경",
+    "title": "GitHub Pages기능을 이용해 Quarto 배포",
+    "section": "렌더링 되는 디렉토리 이름 변경",
+    "text": "렌더링 되는 디렉토리 이름 변경\ngithub pages는 docs라는 디렉토리에서 렌더링 되기때문에 _quarto.yml에 다음 코드를 추가하여 Quarto가 렌더링되는 디렉토리를 _site에서 dose로 변경해줘야 합니다.\n\n\n_quarto.yml\n\nproject:\n  type: website\n  output-dir: docs"
+  },
+  {
+    "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#nojekyll-추가",
+    "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#nojekyll-추가",
+    "title": "GitHub Pages기능을 이용해 Quarto 배포",
+    "section": ".nojekyll 추가",
+    "text": ".nojekyll 추가\ngithub pages는 기본적으로 jekyll로 만든 웹사이트라 가정하기 때문에 배포하려는 웹사이트가 jekyll로 만든 웹사이트가 아니라는 것을 알리는 기능입니다.\n\n\n\n\n\n\n\nMac/Linux\n\n\nTerminal\n\ntouch .nojekyll\n\n\n\nWindows\n\n\nTerminal\n\ncopy NUL .nojekyll"
+  },
+  {
+    "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#필요없는-디렉토리-.gitignore에-추가",
+    "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#필요없는-디렉토리-.gitignore에-추가",
+    "title": "GitHub Pages기능을 이용해 Quarto 배포",
+    "section": "필요없는 디렉토리 .gitignore에 추가",
+    "text": "필요없는 디렉토리 .gitignore에 추가\ngithub pages에서 _site, _book등 디렉토리는 사용되지 않기 때문에 github에도 올라가지 않도록 설정합니다.\n\n\n.gitignore\n\n/.quarto/\n/_site/\n\n만약 이미 push했다면 삭제할 수 있습니다.\n\n\nTerminal\n\ngit rm -r _site"
+  },
+  {
+    "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#github-repo-설정",
+    "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#github-repo-설정",
+    "title": "GitHub Pages기능을 이용해 Quarto 배포",
+    "section": "github repo 설정",
+    "text": "github repo 설정\nrepo 설정을 변경하여 repo에서 github pages 기능을 활성화 합니다. 원하는 branch와 렌더링되는 디렉토리인 docs를 선택하면 됩니다."
+  },
+  {
+    "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#render-commit-push",
+    "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html#render-commit-push",
+    "title": "GitHub Pages기능을 이용해 Quarto 배포",
+    "section": "Render, commit, push",
+    "text": "Render, commit, push\n이제 Quarto 웹사이트를 렌더링하면 docs 디렉토리에 웹사이트 파일이 생성됩니다. 이제 githup에 push만 하면 끝입니다!\n\n\nTerminal\n\nquarto render\ngit push"
+  },
+  {
+    "objectID": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html",
+    "href": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html",
+    "title": "공공데이터 품질관리 프로젝트",
+    "section": "",
+    "text": "2023년 7월, 전라북도 공공데이터 품질관리 용역를 수행했습니다. 결론적으로 중요 지표였던 공공데이터 품질관리 수준평가 96점을 달성하여 전라북도청 평가점수 최고점을 갱신했습니다. 데이터 표준화와 데이터 품질관리에 대한 실무를 접할 수 있는 사업이었습니다."
+  },
+  {
+    "objectID": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#품질관리-수준평가란",
+    "href": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#품질관리-수준평가란",
+    "title": "공공데이터 품질관리 프로젝트",
+    "section": "품질관리 수준평가란?",
+    "text": "품질관리 수준평가란?\n정부에서는 매년 공공데이터법 제9조에 근거하여 공공데이터 개방, 활용, 품질 및 관리체계 등 공공데이터 제공 및 운영에 관한 실태를 파악하고 개선하기 위해 공공데이터 제공 운영실태 평가를 실시하고 있습니다.\n공공데이터 품질관리 수준평가는 공공데이터 제공 운영실태 평가 중 35점을 반영합니다.\n\n공공데이터 제공 운영실태 평가 지표\n\n\n평가영역\n배점(광역 기관 기준)\n\n\n\n\n관리체계\n7\n\n\n개방\n35\n\n\n활용\n23\n\n\n공공데이터 품질관리 수준 평가\n35\n\n\n기타\n-1/건당\n\n\n\n품질관리 수준평가는 공공기관이 관리하는 데이터가 일정 수준의 품질을 확보할 수 있도록 데이터 관리체계를 잘 갖추고 데이터 품질수준을 파악하기 위해 실시하고 있습니다.\n\n공공데이터 품질관리 수준평가 지표\n\n\n번호\n지표\n배점\n\n\n\n\n1\n품질진단 절차 별 일정 준수\n2\n\n\n2\n품질관리 계획수립\n2\n\n\n3\n예방적 품질관리 진단\n12\n\n\n4\n데이터 표준 확산\n10\n\n\n5\n데이터 구조 안정화\n6\n\n\n6\n데이터 연계관리\n8\n\n\n7\n데이터 품질진단\n20\n\n\n8\n품질진단 결과조치\n20\n\n\n9\n데이터 오류율\n14\n\n\n10\n오류신고 요구사항 분석 및 개선\n4\n\n\n11\n개방 데이터 품질수준\n2\n\n\n가점 지표 1\n예방적품질관리 진단 및 주요DB 품질진단 컨설팅\n2\n\n\n가점 지표 2\n대상 DB 35개 초과 선정 및 진단\n3\n\n\n\n위 지표 중 4~9번 지표는 기관에서 관리하는 정보시스템에 대한 DB의 품질을 평가하는데 목적이 있으며 평가에 대응하기 위해서는 데이터 표준화와 데이터 품질관리에 대한 이해가 필요합니다."
+  },
+  {
+    "objectID": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-표준화",
+    "href": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-표준화",
+    "title": "공공데이터 품질관리 프로젝트",
+    "section": "데이터 표준화",
+    "text": "데이터 표준화\n데이터 표준화에 대한 내용은 구글링을 통해 쉽게 찾아낼 수 있습니다. 정확한 개념과 이론을 이해하기 위해서는 다음 페이지가 가장 도움이 됩니다.\n\nData on-air DA 가이드 : 데이터 표준화에 대한 개념과 일반적인 데이터 표준화 프로세스를 알 수 있습니다.\n공공데이터베이스 표준화 관리 매뉴얼 : 공공데이터에 대한 표준화 관리 방법을 알 수 있습니다.\n\nData on-air DA 가이드-데이터 표준화 개념에 따르면, 데이터 표준화는 시스템별로 산재해 있는 데이터 정보 요소에 대한 명칭, 정의, 형식, 규칙에 대한 원칙을 수립하여 이를 전사적으로 적용하는 것으로 정의하고 있습니다.\nDB를 예로 들면 테이블을 생성할 때 다음과 같은 SQL을 통해 생성합니다.\ncreate table 테이블명 (\n    컬럼명1 데이터유형1 제약조건1,\n    컬럼명2 데이터유형2 제약조건2,\n    ...\n);\n이때 임의로 컬럼명, 데이터유형, 제약조건을 정하지 않고 기업/기관에서 관리하고 있는 표준에 따라 정해야 합니다. 이를 통해 동일한 의미를 갖지만 다른 컬럼명을 쓰거나 동일한 컬럼명을 쓰지만 다른 의미로 사용되는 경우를 방지할 수가 있습니다.\n즉, 표준화란 서로 다른 명칭과 유형을 가진 동일한 대상을 하나의 명칭과 유형으로 통일하는 것으로 볼 수 있습니다.\n\n\n\n\n\nclassDiagram\n    표준_table &lt;|-- table1\n    표준_table &lt;|-- table2 \n    표준_table &lt;|-- table3 \n    표준_table : 성명\n    표준_table : 성별\n    표준_table : 주소\n    표준_table : 전화번호\n    class table1{\n      이름\n      남여구분\n      집주소\n      연락처\n    }\n    class table2{\n      성함\n      성별\n      주소지\n      휴대번호\n    }\n    class table3{\n      성명\n      성별\n      주소\n      전화번호\n    }"
+  },
+  {
+    "objectID": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-표준화가-필요한-이유",
+    "href": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-표준화가-필요한-이유",
+    "title": "공공데이터 품질관리 프로젝트",
+    "section": "데이터 표준화가 필요한 이유",
+    "text": "데이터 표준화가 필요한 이유\n\n\n\n\n\n\n\n\n데이터 표준화 미적용\n데이터 표준화 적용\n\n\n\n\n\n컬럼명 의미 혼재\n\n컬럼명이 동일하지만 의미가 다르거나 의미는 같지만 컬럼명이 다른 경우가 존재\n의사소통에 문제가 발생\n\n\n\n컬럼명 통일\n\n동일한 의미의 데이터는 동일한 명칭을 사용\n원활한 의사소통 가능\n\n\n\n\n\n필요 데이터 위치 파악 문제\n\n정해진 표준이 없기 때문에 필요한 정보가 무슨 컬럼명으로 정의되어 있는지 파악하는데 시간이 소요\n\n\n\n필요 데이터 위치 파악 원활\n\n표준에 따라 필요한 데이터의 위치를 쉽게 파악 가능\n\n\n\n\n\n데이터 통합의 어려움\n\n데이터 결합 시 데이터 의미 파악에 많은 시간을 사용\n같은 의미의 컬럼을 결합 시 사용되는 데이터 형식, 단위, 코드값이 다를 수 있기 때문에 추가 정제 작업이 필요\n\n\n\n데이터 통합 용이\n\n정의된 표준을 이해하고 있으면 데이터 의미 파악에 드는 시간 감소\n같은 의미의 컬럼을 결합 시 추가 정제 작업이 필요 없음\n\n\n\n\n\n데이터 품질 문제\n\n컬럼에 대한 도메인이 정의되지 않음\n오류 데이터가 입력될 가능성 높음\n\n\n\n데이터 품질 향상\n\n컬럼에 대한 도메인이 명확하게 정의\n오류 데이터가 입력될 가능성이 낮음"
+  },
+  {
+    "objectID": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-표준-구성요소",
+    "href": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-표준-구성요소",
+    "title": "공공데이터 품질관리 프로젝트",
+    "section": "데이터 표준 구성요소",
+    "text": "데이터 표준 구성요소\n표준 관리 체계에 따라 컬럼을 만들하기 위해서는 먼저 표준 사전을 정의해야 합니다. 표준 사전은 단어, 도메인, 코드, 용어로 구성 되어 있습니다.\n\n\n\n\n\n\nNote\n\n\n\n\n아래 설명은 공공데이터 표준 관리 체계 기준으로 작성했습니다.\n\n세부적인 내용은 기업마다 상이할 수 있습니다.\n\n\n\n\n\n표준 단어\n업무상 사용하는 일정한 의미를 갖는 최소 단위을 의미합니다.\n\n표준단어 예시\n\n\n\n\n\n\n\n\n\n표준단어명\n단어영문약어명\n단어영문명\n형식단어여부\n도메인분류명\n\n\n\n\nIP\nIP\nInternet Protocol\nN\n\n\n\n주소\nADDR\nAddress\nY\n주소\n\n\n가맹점\nFRCS\nFranchise\nN\n\n\n\n명\nNM\nName\nY\n명\n\n\n법정동\nSTDG\nStatutory Dong\nN\n\n\n\n시도\nCTPV\nCities And Provinces\nN\n\n\n\n코드\nCD\nCode\nY\n코드\n\n\n\n\n\n표준 도메인\n업무적인 용도, 사용 빈도와 데이터의 물리적인 특성 등을 고려하여 도메인을 분류하고 데이터 타입，길이 등을 표준화하여 표준 도메인을 정의합니다.\n도메인명은 표준단어로 만들어지며 마지막 단어는 형식단어가 들어가야 합니다.\n\n표준도메인 예시\n\n\n도메인분류\n도메인명\n데이터타입\n데이터길이\n\n\n\n\n주소\n주소V15\nVARCHAR\n15\n\n\n명\n명V200\nVARCHAR\n200\n\n\n코드\n코드C2\nCHAR\n2\n\n\n\n\n\n표준 용어\n표준 단어, 표준 도메인을 활용하여 용어를 정의합니다. 정의된 용어는 컬럼을 생성할 때 사용됩니다.\n표준용어명은 표준단어의 조합으로 만들어지며 마지막 단어는 형식단어가 들어가야 합니다. 일반적으로 도메인명을 용어 끝에 붙여서 사용합니다.\nex) 법정동시도코드(STDG_CTPV_CD) = 법정동(STDG) + 시도(CTPV) + 코드(CD)\n\n표준용어 예시\n\n\n표준용어명\n영문약어명\n표준도메인명\n\n\n\n\nIP주소\nIP_ADDR\n주소V15\n\n\n가맹점명\nFRCS_NM\n명V200\n\n\n법정동시도코드\nSTDG_CTPV_CD\n코드C2\n\n\n\n\n\n표준 코드\n업무에서 사용되거나 필요한 모든 코드를 수집하여 통합한 사전입니다. 코드성 컬럼의 값은 표준 코드에 있는 코드값을 사용하도록 규정합니다.\n표준용어명은 표준단어의 조합으로 만들어지며 마지막 단어는 코드 도메인을 갖는 형식단어가 들어가야합니다.\n\n표준코드 예시\n\n\n한글코드명\n영문코드명\n코드값\n코드값의미\n\n\n\n\n법정동시도코드\nSTDG_CTPV_CD\n11\n서울특별시\n\n\n법정동시도코드\nSTDG_CTPV_CD\n51\n강원특별자치도\n\n\n법정동시도코드\nSTDG_CTPV_CD\n41\n경기도"
+  },
+  {
+    "objectID": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-품질관리",
+    "href": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#데이터-품질관리",
+    "title": "공공데이터 품질관리 프로젝트",
+    "section": "데이터 품질관리",
+    "text": "데이터 품질관리\n양질의 데이터를 확보하기 위해서는 지속적인 데이터 품질관리 활동이 필요합니다. 품질관리 활동에는 표준화, 모델링, 데이터 값, 데이터 활용에 대한 관리가 있으며 데이터 품질을 측정하기 위한 지표가 있습니다.\nDB에 대한 공공데이터 품질관리 지표는 표준, 구조, 값, 연계 진단으로 이뤄져있습니다. 이를 통해 데이터에 대한 품질을 측정하고 오류 데이터를 발견하여 데이터 품질을 개선하고 있습니다.\n\n표준 진단\n표준 진단은 DB 내 컬럼 중 표준 용어가 적용된 비율을 지표로 정하고 진단을 수행하게 됩니다.\n표준을 적용한 컬럼이라는 것은 세부적으로 다음을 의미합니다.\n\n물리컬럼명이 표준용어 영문약어명과 일치\n컬럼에 정의된 도메인(데이터 형식, 데이터 길이 등)이 표준용어과 표준도메인에 정의된 사항과 일치\n\n전체 컬럼의 개수 중 표준이 적용된 표준의 개수를 비율을 계산하면 표준적용율이 산출됩니다.\n\\[\n표준적용률(\\%) =  \\frac{표준이\\ 적용된\\ 컬럼\\ 개수}{전체\\ 컬럼\\ 개수} \\times 100\n\\]\n\n\n구조 진단\n구조 진단은 테이블정의서 및 컬럼정의서가 물리 DB 구조와 일치하는지 확인하는 진단입니다. 공공데이터 품질관리 수준평가에서는 4가지 종류의 현행화율을 산정하여 가장 낮은 현행화율을 점수에 반영합니다.\n\n\n\n\n\n\n\n\n\n\n테이블현행화율(%) = \\(\\frac{n(테이블\\ 정의서 \\cap 물리\\ DB\\ 테이블)}{n(물리\\ DB\\ 테이블)} \\times 100\\)\n테이블정의서현행화율(%) = \\(\\frac{n(테이블\\ 정의서 \\cap 물리\\ DB\\ 테이블)}{n(테이블\\ 정의서)} \\times 100\\)\n컬럼현행화율(%) = \\(\\frac{n(컬럼\\ 정의서 \\cap 물리\\ DB\\ 컬럼)}{n(물리\\ DB\\ 컬럼)} \\times 100\\)\n컬럼정의서현행화율(%) = \\(\\frac{n(컬럼\\ 정의서 \\cap 물리\\ DB\\ 컬럼)}{n(컬럼\\ 정의서)} \\times 100\\)\n\n\n\n값 진단\n값 진단은 정해진 진단룰에 따라 데이터의 값을 확인하여 데이터 오류율을 진단합니다. 공공데이터에서는 범정부 진단 기준, 업무규칙을 정하여 진단룰을 설정하도록 되어 있습니다.\n\n범정부 진단 기준\n\n\n\n\n\n\n\n순번\n진단기준\n진단내용\n\n\n\n\n1\n시간순서 일관성\n시간순서 관계를 갖는 컬럼 간의 데이터 오류 측정\n\n\n2\n선후관계 정확성\n선후관계를 가지는 컬럼 간의 데이터 오류 측정\n\n\n3\n컬럼 간 논리관계 일관성\n컬럼 간 논리적 일관성 오류를 측정\n\n\n4\n계산식\n계산 값이 정확하게 관리되고 있는지 측정\n\n\n5\n참조관계\n참조하는 컬럼과 참조되는 컬럼 사이의 일관성을 유지하고 있는지 측정\n\n\n6\n글자깨짐\n데이터 값에 깨진 글자 또는 완성된 한글이 아닌 오류 데이터가 입력되었는지 측정\n\n\n7\n공백, 특수문자\n데이터 값에 불필요한 공백과 특수문자가 입력되었는지 측정\n\n\n8\n필수값\n데이터의 특성 상 반드시 입력되어야 하는 값이 누락없이 입력되었는지 측정\n\n\n9\n중복데이터\nDB 내 두 개 이상 테이블(또는 파일)에 존재하는 동일한(중복) 데이터의 값 일치 여부 측정\n\n\n10\n날짜 도메인\n날짜 데이터 값이 유효한 범위를 벗어나거나 표준 형식을 위배하였는지 측정\n\n\n11\n번호 도메인\n번호생성 규칙을 위배하였는지 측정\n\n\n12\n여부 도메인\n컬럼에 저장된 값이 유효 값(표준으로 정의한 여부 값)으로 일관되게 적용되고 있는지 측정\n\n\n13\n코드 도메인\n표준으로 정의한 코드 값으로 일관되게 적용되고 있는지 측정\n\n\n14\n금액 도메인\n금액 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정\n\n\n15\n수량 도메인\n수량 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정\n\n\n16\n율 도메인\n율 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정\n\n\n\n\n업무규칙 예시\n\n\n\n\n\n\n\n업무규칙설명\n대상 전체건수 SQL\n오류 데이터 추출 SQL\n\n\n\n\n시작일은 종료일보다 빠를 수 없다.\nselect count(*) from table\nselect start_date, end_date from table\nwhere start_date &gt; end_date\n\n\n\n\n\n연계 진단\n정보시스템(DB)에는 여러 기관과 연계되어 데이터를 송수신하는 경우가 있습니다. 이 경우 연계 데이터의 목록을 정의하고 송수신 내역을 주기적으로 점검하여 관련 산출물을 남겨야 합니다."
+  },
+  {
+    "objectID": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#프로젝트-간-문제-해결",
+    "href": "posts/2024-04-16-opendata-qc/2024-04-16-opendata-qc.html#프로젝트-간-문제-해결",
+    "title": "공공데이터 품질관리 프로젝트",
+    "section": "프로젝트 간 문제 해결",
+    "text": "프로젝트 간 문제 해결\n데이터 품질관리에 대한 개념과 품질진단 툴(DA#, WDQ 등) 활용법만 읽어 보면 쉽게 끝날 수 있는 프로젝트로 보이지만 실무를 하다보니 여러가지 어려움이 있었습니다.\n\n표준이 없었던 정보시스템(DB)에 대한 표준 사전 정의\n평가를 진행했던 DB 23개 중 대부분이 범정부 표준이 제정되기 이전에 구축되었기 때문에 표준이 적용되지 않은 상태였습니다. 만점을 얻기 위해서는 표준적용률 90% 이상을 달성해야하기 때문에 DB내 컬럼을 표준용어로 등록 후 표준도메인, 표준코드, 표준단어를 만들어야 하는 과정이 필요했습니다.\n\n\n\n\nflowchart LR\n    A(DB 내 컬럼) --&gt; B[표준 용어]\n    B --&gt; C[표준 도메인]\n    B --&gt; D[표준 코드]\n    B --&gt; E[표준 단어]\n\n\n\n\n\n정의된 표준 용어로부터 표준 도메인, 표준 코드, 표준 단어를 만들어 내는 과정은 정해진 규칙에 따라 만들면 되기 때문에 어렵지 않습니다. 하지만 컬럼명에서 표준용어를 만들기 위해서는 각 컬럼명을 확인하여 적절한 도메인 분류명을 정의해줘야 했습니다. 평균적으로 DB 1개 당 등록해야할 표준 용어가 200개 정도라고 한다면 23개 DB를 모두 정의해줘야 했으므로 4600개의 도메인 분류명을 정의해야 했습니다.\n\n도메인분류명 정의 전 표준용어{.hover .bordered}\n\n\n표준용어명\n영문약어명\n표준도메인명\n\n\n\n\nIP주소\nIP_ADDR\n{적절한 도메인명}V15\n\n\n가맹점명\nFRCS_NM\n{적절한 도메인명}V200\n\n\n법정동시도코드\nSTDG_CTPV_CD\n{적절한 도메인명}C2\n\n\n\n수작업으로 컬럼명을 확인하고 분류명을 정하는 작업은 시간이 오래 걸리는 단순 반복 작업입니다. 이를 해결하기 위해 chat gpt API를 활용하여 도메인 분류 모델을 만들었습니다.\n\n\n\n\nflowchart LR\n    A[표준 용어] --&gt;|chat gpt API| B[도메인 분류명]\n\n\n\n\n\n\n\n컬럼명은 같지만 도메인이 다른 경우\n표준 등록만으로 표준적용율을 올릴 수 없는 경우가 있습니다. DB내 정의된 물리컬럼명은 같지만 정의된 도메인이 다른 경우 입니다. 표준 용어 사전에는 하나의 영문약어명만 등록될 수 있기 때문에 여러 도메인을 가진 동일한 물리컬럼명의 경우 하나의 도메인만 표준을 적용한 것으로 측정됩니다.\n\n컬럼명은 같지만 도메인이 다른 경우\n\n\n테이블명\n물리컬럼명\n데이터 타입\n데이터 길이\n\n\n\n\ntable1\ncolname\nchar\n10\n\n\ntable2\ncolname\nvarchar\n200\n\n\ntable3\ncolname\nvarchar\n100\n\n\ntable4\ncolname\nvarchar\n100\n\n\n\n이 경우 정보시스템 유지보수 담당자와 미팅을 통해 물리컬럼명이나 도메인이 변경이 가능한 지 확인 후 불가능하다면 가장 많이 사용한 도메인을 표준용어의 도메인으로 등록하여 진단을 수행했습니다.\n\n\n프로파일링을 통한 업무규칙 생성\n공공데이터 품질관리 수준평가에서는 진단 대상 컬럼에 대해 진단룰을 설정해야합니다. 이를 위해 프로파일링이라는 과정을 통해 진단룰을 도출해야 합니다.\n프로파일링이란 실제 데이터의 통계 및 패턴 분석을 통해 오류가 추정되는 데이터를 찾아내는 기법입니다.\n\nraw 단계부터 데이터 분석을 수행하다 보면 데이터에 대한 특성 파악, 전처리에 시간이 많이 들곤 합니다. 만약 데이터 표준화와 데이터 품질관리가 잘 갖춰진 데이터라면 이 부분에 대한 시간이 많이 줄어들 수 있을 것으로 예상이 됩니다. 그 이유는,\n\n현행화된 메타데이터를 통해 데이터 특성을 쉽게 파악할 수 있습니다.\n표준화된 데이터이기 때문에 데이터 결합 과정이 수월합니다.\n데이터 품질관리 과정을 통해 산출된 지표를 통해 데이터 품질수준을 파악할 수 있고 고품질 데이터를 확보할 수 있습니다.\n전처리 과정에서 필요한 결측치, 이상치 도출에 대한 힌트를 얻을 수 있습니다.\n\n이 외에도 많은 장점이 있을 것입니다. OECD가 실시한 2023 공공데이터 평가에서 대한민국이 1위를 달성했고 공공데이터 포털 및 여러 플랫폼을 통해서 활용 가능성이 높은 데이터들이 많이 개방된 상태입니다. 앞으로도 공공데이터가 많은 가치를 창출할 수 있는 데이터로 발전할 것으로 기대가 됩니다."
+  },
+  {
+    "objectID": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html",
+    "href": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html",
+    "title": "docker를 이용하여 Rstudio-server 설치하기",
+    "section": "",
+    "text": "WSL 설명서에 따라 WSL과 Docker Desktop을 설치\nhttps://rocker-project.org/images/에서 이미지 선택 후 pull 및 run\n\n\n\nTerminal\n\ndocker pull rocker/verse\n\n\n\nTerminal\n\ndocker run -ti -e PASSWORD=yourpassword -p 8787:8787 rocker/verse\n\n\nrstudio server 접속(http://localhost:8787/), ID는 rstudio."
+  },
+  {
+    "objectID": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#요약",
+    "href": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#요약",
+    "title": "docker를 이용하여 Rstudio-server 설치하기",
+    "section": "",
+    "text": "WSL 설명서에 따라 WSL과 Docker Desktop을 설치\nhttps://rocker-project.org/images/에서 이미지 선택 후 pull 및 run\n\n\n\nTerminal\n\ndocker pull rocker/verse\n\n\n\nTerminal\n\ndocker run -ti -e PASSWORD=yourpassword -p 8787:8787 rocker/verse\n\n\nrstudio server 접속(http://localhost:8787/), ID는 rstudio."
+  },
+  {
+    "objectID": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#wsl-설치",
+    "href": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#wsl-설치",
+    "title": "docker를 이용하여 Rstudio-server 설치하기",
+    "section": "WSL 설치",
+    "text": "WSL 설치\nWSL(Linux용 Windows 하위 시스템)은 별도의 가상 머신 또는 이중 부팅 없이 Windows 컴퓨터에서 Linux 환경을 실행할 수 있는 Windows의 기능입니다.\n설치를 위해서는 microsoft에서 제공하는 WSL 설명서에 따라 진행하면 됩니다. 설명서는 WSL 설치 후 추가 설치할 사항들도 제공하고 있습니다. 저는 VS Code 및 Windows 터미널을 설치했습니다.\n설명서에 따라 진행하더라도 안되는 경우가 있다면 BIOS 가상화 설정이 되어 있는지 확인합니다."
+  },
+  {
+    "objectID": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#docker-설치",
+    "href": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#docker-설치",
+    "title": "docker를 이용하여 Rstudio-server 설치하기",
+    "section": "docker 설치",
+    "text": "docker 설치\ndocker 설치 또한 WSL 설명서에 따라 진행하면 됩니다. 설명서에서는 Windows에 Docker desktop 설치를 안내합니다. 설명서에 따라 Docker desktop에서 WSL을 연결하면 WSL에서도 Docker를 사용할 수 있습니다."
+  },
+  {
+    "objectID": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#docker-hub에서-pull-image",
+    "href": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#docker-hub에서-pull-image",
+    "title": "docker를 이용하여 Rstudio-server 설치하기",
+    "section": "docker hub에서 pull image",
+    "text": "docker hub에서 pull image\ndocker hub에서 가장 인기 있는 R 관련 image는 Rocker Project 입니다. Rocker Project에서는 다양한 이미지를 docker hub를 통해 제공하고 있습니다. 필요에 따라 원하는 이미지를 선택하면 됩니다.\nrocker/verse 이미지를 다운로드 하기 위해 WSL 터미널에서 다음 코드를 실행합니다.\n\n\nTerminal\n\ndocker pull rocker/verse\n\n이후 Docker desktop에서 이미지가 다운로드된 것을 확인합니다."
+  },
+  {
+    "objectID": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#컨테이너-실행",
+    "href": "posts/2024-04-26-Installing_r_using_docker/2024-04-26-Installing_r_using_docker.html#컨테이너-실행",
+    "title": "docker를 이용하여 Rstudio-server 설치하기",
+    "section": "컨테이너 실행",
+    "text": "컨테이너 실행\nWSL 터미널에서 다음 코드를 통해 컨테이너를 실행합니다.\n\n\nTerminal\n\ndocker run --rm -ti -e PASSWORD=yourpassword -p 8787:8787 rocker/rstudio\n\n컨테이너가 실행되면 http://localhost:8787/를 통해 rstudio-server에 접속할 수 있습니다. ID는 rstudio입니다."
+  },
+  {
+    "objectID": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html",
+    "href": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html",
+    "title": "Quarto website 글꼴 적용 방법",
+    "section": "",
+    "text": "https://fonts.google.com/에서 원하는 폰트를 선택\ncustom.scss를 생성 및 폰트 관련 변수 수정\n\n\n\ncustom.scss\n\n/*-- scss:defaults --*/\n\n$headings-font-family:        \"Hahmlet\", -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\n$font-family-sans-serif:      \"Gothic A1\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n\n/*-- scss:rules --*/\n\n// Variables\n\n$web-font-path: \"https://fonts.googleapis.com/css2?family=Gothic+A1&family=Hahmlet:wght@100..900&display=swap\";\n@if $web-font-path {\n  @import url($web-font-path);\n}\n\n\n_quarto.yml 수정\n\n\n\n_quarto.yml\n\nformat:\n  html:\n    theme:\n      - custom.scss"
+  },
+  {
+    "objectID": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#요약",
+    "href": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#요약",
+    "title": "Quarto website 글꼴 적용 방법",
+    "section": "",
+    "text": "https://fonts.google.com/에서 원하는 폰트를 선택\ncustom.scss를 생성 및 폰트 관련 변수 수정\n\n\n\ncustom.scss\n\n/*-- scss:defaults --*/\n\n$headings-font-family:        \"Hahmlet\", -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\n$font-family-sans-serif:      \"Gothic A1\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n\n/*-- scss:rules --*/\n\n// Variables\n\n$web-font-path: \"https://fonts.googleapis.com/css2?family=Gothic+A1&family=Hahmlet:wght@100..900&display=swap\";\n@if $web-font-path {\n  @import url($web-font-path);\n}\n\n\n_quarto.yml 수정\n\n\n\n_quarto.yml\n\nformat:\n  html:\n    theme:\n      - custom.scss"
+  },
+  {
+    "objectID": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#google-fonts-선택",
+    "href": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#google-fonts-선택",
+    "title": "Quarto website 글꼴 적용 방법",
+    "section": "google fonts 선택",
+    "text": "google fonts 선택\ngoogle fonts에서는 다양한 글꼴을 제공하고 있으며 가독성 좋은 한글 폰트도 많이 있습니다.\ngoogle fonts를 사용하기 위해서는 먼저 https://fonts.google.com/에서 원하는 폰트에 get font 버튼을 누릅니다.\n\n원하는 폰트를 다 선택했다면 우측 상단에 쇼핑백 모양 아이콘을 누룬 뒤 get embed code를 클릭합니다.\n\n아래 그림의 형광색 부분 링크를 복사합니다. 이후 custom.scss 파일에 붙여넣을 예정입니다."
+  },
+  {
+    "objectID": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#custom.scss-추가를-통한-폰트-변경",
+    "href": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#custom.scss-추가를-통한-폰트-변경",
+    "title": "Quarto website 글꼴 적용 방법",
+    "section": "custom.scss 추가를 통한 폰트 변경",
+    "text": "custom.scss 추가를 통한 폰트 변경\nSCSS는 CSS Preprocessor 중 하나 입니다. SCSS로 작성된 파일은 CSS로 컴파일되어 웹에서 동작합니다.\nQuarto 웹페이지의 테마도 SCSS을 바탕으로 만들어지며 기본값으로 제공하는 SCSS파일이 있습니다. 만약 일부를 수정하고 싶다면 custom.scss를 추가하여 변수를 수정하면 됩니다.\n폰트를 수정하기 위해서는 custom.scss에서 2가지 부분만 작성하면 됩니다.\n\n1. google fonts에서 사용하고자 하는 폰트 불러오기\n복사했던 링크를 web-font-path에 할당하면 @import을 통해 폰트를 불러옵니다.\n\n\nSCSS\n\n$web-font-path: \"링크\";\n@if $web-font-path {\n  @import url($web-font-path);\n}\n\n\n\n2. 불러온 폰트 변수 선언\nQuarto 웹페이지 SCSS에서 폰트에 관련된 변수는 3가지 입니다.\n\n\n\n변수명\n폰트 적용 위치\n\n\n\n\n$headings-font-family\n제목, Navbar 등에 사용되는 폰트\n\n\n$font-family-sans-serif\n본문에 사용 되는 폰트\n\n\n$font-family-monospace\n코드에 사용 되는 폰트\n\n\n\n아래 코드처럼 원하는 폰트를 할당하면 됩니다.\n\n\nSCSS\n\n$headings-font-family:        \"폰트1\", \"폰트2\";\n$font-family-sans-serif:      \"폰트3\", \"폰트4\";\n$font-family-monospace:       \"폰트5\";\n\n변수 하나에 여러가지 폰트가 할당되어 있는 것을 볼 수 있습니다. 이를 통해 만약 폰트가 제공되지 않는 문자가 있는 경우 그 다음에 선언된 폰트가 적용됩니다.\n아래 예시로 작성한 custom.scss를 보면 google fonts에서 Gothic A1와 Hahmlet를 선택한 링크를 $web-font-path에 할당하여 폰트를 불러오고, $headings-font-family와 $font-family-sans-serif의 가장 앞부분에 폰트 이름을 넣어줬습니다.\n\n\ncustom.scss\n\n/*-- scss:defaults --*/\n\n\n$headings-font-family:        \"Hahmlet\", -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\n$font-family-sans-serif:      \"Gothic A1\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n\n\n/*-- scss:rules --*/\n\n\n// Variables\n\n$web-font-path: \"https://fonts.googleapis.com/css2?family=Gothic+A1&family=Hahmlet:wght@100..900&display=swap\";\n@if $web-font-path {\n  @import url($web-font-path);\n}"
+  },
+  {
+    "objectID": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#quarto.yml-수정",
+    "href": "posts/2024-05-07-change_font_in_qmd/2024-05-07-change_font_in_qmd.html#quarto.yml-수정",
+    "title": "Quarto website 글꼴 적용 방법",
+    "section": "_quarto.yml 수정",
+    "text": "_quarto.yml 수정\n마지막으로 _quarto.yml에 “custom.scss”를 선언하여 웹사이트에 적용되도록 합니다.\n\n\n_quarto.yml\n\nformat:\n  html:\n    theme:\n      - custom.scss\n\n만약 Quarto에서 제공하는 테마를 사용하고 있다면 다음과 같이 _quarto.yml를 수정합니다.\n\n\n_quarto.yml\n\nformat:\n  html:\n    theme:\n      - minty\n      - custom.scss"
+  },
+  {
+    "objectID": "posts/quarto.html",
+    "href": "posts/quarto.html",
+    "title": "qmd파일에서 코드를 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때 ```로 감싸서 작성\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있다. 140가지 언어를 지원.\ndefalut를 사용하면 지원하지 않는는 언어도 유사하게 처리를 해준다.\n``` r\ncode &lt;- 1\n```\n``` defalut\ncode = 1\n```\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면,\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
+  },
+  {
+    "objectID": "posts/quarto.html#코드-작성",
+    "href": "posts/quarto.html#코드-작성",
+    "title": "qmd파일에서 코드를 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때 ```로 감싸서 작성\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있다. 140가지 언어를 지원.\ndefalut를 사용하면 지원하지 않는는 언어도 유사하게 처리를 해준다.\n``` r\ncode &lt;- 1\n```\n``` defalut\ncode = 1\n```\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면,\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
+  },
+  {
+    "objectID": "posts/quarto.html#callout-blocks",
+    "href": "posts/quarto.html#callout-blocks",
+    "title": "qmd파일에서 코드를 작성하는 방법",
+    "section": "Callout Blocks",
+    "text": "Callout Blocks\nCallout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "posts/quarto.html#단축키-표시",
+    "href": "posts/quarto.html#단축키-표시",
+    "title": "qmd파일에서 코드를 작성하는 방법",
+    "section": "단축키 표시",
+    "text": "단축키 표시\n\ninput\n\n{{&lt; kbd Shift-Ctrl-P &gt;}}\n\noutput\n\nShift-Ctrl-P"
+  },
+  {
+    "objectID": "posts/quarto.html#publishing",
+    "href": "posts/quarto.html#publishing",
+    "title": "qmd파일에서 코드를 작성하는 방법",
+    "section": "Publishing",
+    "text": "Publishing\nquarto 문서를 만들었다면 다양한 루트로 Publishing이 가능하다.\n\ngithub pages\ngithub pages는 docs라는 디렉토리에서 렌더링 되기때문에 _quarto.yml에 다음 코드를 추가해줘야 한다.\n\n\n_quarto.yml\n\nproject:\n  type: website\n  output-dir: docs\n\n그리고 .nojekyll도 추가, window11에서 Rstudio terminal를 이용 시 copy가 실행되지 않았는데 오히려 touch는 잘 작동되었다.\n\n\n\n\n\n\n\nMac/Linux\n\n\nTerminal\n\ntouch .nojekyll\n\n\n\nWindows\n\n\nTerminal\n\ncopy NUL .nojekyll\n\n\n\n\ngithub pages에 Publishing할때 필요 없는 디렉토리는 .gitignore에 추가하는 것이 좋다. github pages에서 _site, _book등 디렉토리는 모두 docs에서 render되기 때문이다.\n\n\n.gitignore\n\n/.quarto/\n/_site/\n\n만약 이미 push했다면,\n\n\nTerminal\n\ngit rm -r _site\n\n이후 render 후 git에 push\n\n\nTerminal\n\nquarto render\ngit push"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Quarto website 글꼴 적용 방법\n\n\n\n\n\n\n\nquarto\n\n\nscss\n\n\n\n\nQuarto website의 폰트를 scss를 수정하여 바꾸기\n\n\n\n\n\n\nMay 7, 2024\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\ndocker를 이용하여 Rstudio-server 설치하기\n\n\n\n\n\n\n\ndocker\n\n\nR\n\n\n\n\nwindows에서 wsl + docker + Rstudio-server 환경 구축 방법을 정리\n\n\n\n\n\n\nApr 26, 2024\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\n공공데이터 품질관리 프로젝트\n\n\n\n\n\n\n\n공공데이터\n\n\n데이터 품질관리\n\n\n\n\n공공데이터 품질관리에 대한 개념과 제가 경험한 평가 대응 방법을 공유합니다.\n\n\n\n\n\n\nApr 16, 2024\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nCallout Blocks 사용 방법\n\n\n\n\n\n\n\nquarto\n\n\n\n\nQuarto에서 Callout Blocks을 사용하여 효과적인 디지털 글쓰기\n\n\n\n\n\n\nSep 17, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nQuarto 문서에서 코드 블럭을 작성하는 방법\n\n\n\n\n\n\n\nquarto\n\n\n\n\nqmd 문서에서 여러 언어에 맞는 디자인을 적용하여 코드 블럭 작성하는 방법입니다.\n\n\n\n\n\n\nSep 17, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nGitHub Pages기능을 이용해 Quarto 배포\n\n\n\n\n\n\n\nquarto\n\n\ngithub\n\n\n\n\nQuarto에서 만든 웹사이트, 블로그를 GitHub Pages 기능을 활용해 배포하는 방법입니다.\n\n\n\n\n\n\nSep 17, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\ngit, github, Rstudio 연동하기\n\n\n\n\n\n\n\ngit\n\n\nrstudio\n\n\n\n\nRstudio에서 git과 github를 연동하는 방법입니다.\n\n\n\n\n\n\nJul 5, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nWSL, R, conda 설치 방법\n\n\n\n\n\n\n\nwsl\n\n\nR\n\n\nconda\n\n\n\n\nwindow 환경과 리눅스(WSL) 환경에서 R과 conda를 설치하는 방법입니다.\n\n\n\n\n\n\nJun 5, 2023\n\n\n김경환\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
+    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있수 있습니다. 140가지 이상의 언어를 지원합니다.\n\n\n\n\n\n\n\ninput\n``` r\ncode &lt;- 1\n```\n\n\noutput\ncode &lt;- 1\n\n\n\n지원하지 않는 언어는 defalut를 사용하여 그럴듯한 디자인을 적용해줍니다.\n\n\n\n\n\n\n\ninput\n``` defalut\ncode = 1\n```\n\n\noutput\ncode = 1\n\n\n\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면 다음과 같이 작성합니다.\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
+  },
+  {
+    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-작성",
+    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-작성",
+    "title": "Quarto 문서에서 코드를 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때 ```로 감싸서 작성\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있다. 140가지 언어를 지원.\ndefalut를 사용하면 지원하지 않는는 언어도 유사하게 처리를 해준다.\n``` r\ncode &lt;- 1\n```\n``` defalut\ncode = 1\n```\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면,\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
+  },
+  {
+    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#callout-blocks",
+    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#callout-blocks",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "Callout Blocks",
+    "text": "Callout Blocks\nCallout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
+    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있수 있습니다. 140가지 이상의 언어를 지원합니다.\n\n\n\n\n\n\n\ninput\n``` r\ncode &lt;- 1\n```\n\n\noutput\ncode &lt;- 1\n\n\n\n지원하지 않는 언어는 defalut를 사용하여 그럴듯한 디자인을 적용해줍니다.\n\n\n\n\n\n\n\ninput\n``` defalut\ncode = 1\n```\n\n\noutput\ncode = 1\n\n\n\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면 다음과 같이 작성합니다.\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
+  },
+  {
+    "objectID": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html",
+    "href": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html",
+    "title": "Callout Blocks 사용 방법",
+    "section": "",
+    "text": "Callout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\nnotetipwarningcautionimportant\n\n\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-tip}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nTip\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-warning}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nWarning\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-caution}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nCaution\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-important}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nImportant\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html#callout-blocks",
+    "href": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html#callout-blocks",
+    "title": "Callout Blocks 사용 방법",
+    "section": "",
+    "text": "Callout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\nnotetipwarningcautionimportant\n\n\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-tip}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nTip\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-warning}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nWarning\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-caution}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nCaution\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-important}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nImportant\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```"
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```"
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#다양한-언어에-맞는-디자인-적용",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#다양한-언어에-맞는-디자인-적용",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "다양한 언어에 맞는 디자인 적용",
+    "text": "다양한 언어에 맞는 디자인 적용\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있수 있습니다. 140가지 이상의 언어를 지원합니다.\n\n\n\n\n\n\n\ninput\n``` r\ncode &lt;- 1\n```\n\n\noutput\ncode &lt;- 1\n\n\n\n지원하지 않는 언어는 defalut를 사용하여 그럴듯한 디자인을 적용해줍니다.\n\n\n\n\n\n\n\ninput\n``` defalut\ncode = 1\n```\n\n\noutput\ncode = 1"
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#파일명-프로그램명-명시",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#파일명-프로그램명-명시",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "파일명, 프로그램명 명시",
+    "text": "파일명, 프로그램명 명시\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면 다음과 같이 작성합니다.\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1\n\n\n\n\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\nR\n\ncode = 1"
+  }
+]

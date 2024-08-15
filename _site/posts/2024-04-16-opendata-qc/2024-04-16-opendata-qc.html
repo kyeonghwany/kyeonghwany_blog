@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="김경환">
+<meta name="dcterms.date" content="2024-04-16">
+<meta name="description" content="공공데이터 품질관리에 대한 개념과 제가 경험한 평가 대응 방법을 공유합니다.">
+
+<title>Kyeonghwany - 공공데이터 품질관리 프로젝트</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NDDS4J9T4S"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NDDS4J9T4S', { 'anonymize_ip': true});
+</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Kyeonghwany</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">Portfolio</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#품질관리-수준평가란" id="toc-품질관리-수준평가란" class="nav-link active" data-scroll-target="#품질관리-수준평가란">품질관리 수준평가란?</a></li>
+  <li><a href="#데이터-표준화" id="toc-데이터-표준화" class="nav-link" data-scroll-target="#데이터-표준화">데이터 표준화</a></li>
+  <li><a href="#데이터-표준화가-필요한-이유" id="toc-데이터-표준화가-필요한-이유" class="nav-link" data-scroll-target="#데이터-표준화가-필요한-이유">데이터 표준화가 필요한 이유</a></li>
+  <li><a href="#데이터-표준-구성요소" id="toc-데이터-표준-구성요소" class="nav-link" data-scroll-target="#데이터-표준-구성요소">데이터 표준 구성요소</a>
+  <ul class="collapse">
+  <li><a href="#표준-단어" id="toc-표준-단어" class="nav-link" data-scroll-target="#표준-단어">표준 단어</a></li>
+  <li><a href="#표준-도메인" id="toc-표준-도메인" class="nav-link" data-scroll-target="#표준-도메인">표준 도메인</a></li>
+  <li><a href="#표준-용어" id="toc-표준-용어" class="nav-link" data-scroll-target="#표준-용어">표준 용어</a></li>
+  <li><a href="#표준-코드" id="toc-표준-코드" class="nav-link" data-scroll-target="#표준-코드">표준 코드</a></li>
+  </ul></li>
+  <li><a href="#데이터-품질관리" id="toc-데이터-품질관리" class="nav-link" data-scroll-target="#데이터-품질관리">데이터 품질관리</a>
+  <ul class="collapse">
+  <li><a href="#표준-진단" id="toc-표준-진단" class="nav-link" data-scroll-target="#표준-진단">표준 진단</a></li>
+  <li><a href="#구조-진단" id="toc-구조-진단" class="nav-link" data-scroll-target="#구조-진단">구조 진단</a></li>
+  <li><a href="#값-진단" id="toc-값-진단" class="nav-link" data-scroll-target="#값-진단">값 진단</a></li>
+  <li><a href="#연계-진단" id="toc-연계-진단" class="nav-link" data-scroll-target="#연계-진단">연계 진단</a></li>
+  </ul></li>
+  <li><a href="#프로젝트-간-문제-해결" id="toc-프로젝트-간-문제-해결" class="nav-link" data-scroll-target="#프로젝트-간-문제-해결">프로젝트 간 문제 해결</a>
+  <ul class="collapse">
+  <li><a href="#표준이-없었던-정보시스템db에-대한-표준-사전-정의" id="toc-표준이-없었던-정보시스템db에-대한-표준-사전-정의" class="nav-link" data-scroll-target="#표준이-없었던-정보시스템db에-대한-표준-사전-정의">표준이 없었던 정보시스템(DB)에 대한 표준 사전 정의</a></li>
+  <li><a href="#컬럼명은-같지만-도메인이-다른-경우" id="toc-컬럼명은-같지만-도메인이-다른-경우" class="nav-link" data-scroll-target="#컬럼명은-같지만-도메인이-다른-경우">컬럼명은 같지만 도메인이 다른 경우</a></li>
+  <li><a href="#프로파일링을-통한-업무규칙-생성" id="toc-프로파일링을-통한-업무규칙-생성" class="nav-link" data-scroll-target="#프로파일링을-통한-업무규칙-생성">프로파일링을 통한 업무규칙 생성</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">공공데이터 품질관리 프로젝트</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">공공데이터</div>
+    <div class="quarto-category">데이터 품질관리</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    공공데이터 품질관리에 대한 개념과 제가 경험한 평가 대응 방법을 공유합니다.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>김경환 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 16, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>2023년 7월, 전라북도 공공데이터 품질관리 용역를 수행했습니다. 결론적으로 중요 지표였던 <strong>공공데이터 품질관리 수준평가 96점을 달성</strong>하여 전라북도청 평가점수 최고점을 갱신했습니다. 데이터 표준화와 데이터 품질관리에 대한 실무를 접할 수 있는 사업이었습니다.</p>
+<section id="품질관리-수준평가란" class="level2">
+<h2 class="anchored" data-anchor-id="품질관리-수준평가란">품질관리 수준평가란?</h2>
+<p>정부에서는 매년 공공데이터법 제9조에 근거하여 공공데이터 개방, 활용, 품질 및 관리체계 등 공공데이터 제공 및 운영에 관한 실태를 파악하고 개선하기 위해 <strong>공공데이터 제공 운영실태 평가</strong>를 실시하고 있습니다.</p>
+<p><strong>공공데이터 품질관리 수준평가</strong>는 공공데이터 제공 운영실태 평가 중 35점을 반영합니다.</p>
+<table class="table-hover table-bordered table">
+<caption>공공데이터 제공 운영실태 평가 지표</caption>
+<thead>
+<tr class="header">
+<th>평가영역</th>
+<th>배점(광역 기관 기준)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>관리체계</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>개방</td>
+<td>35</td>
+</tr>
+<tr class="odd">
+<td>활용</td>
+<td>23</td>
+</tr>
+<tr class="even">
+<td><strong>공공데이터 품질관리 수준 평가</strong></td>
+<td>35</td>
+</tr>
+<tr class="odd">
+<td>기타</td>
+<td>-1/건당</td>
+</tr>
+</tbody>
+</table>
+<p>품질관리 수준평가는 공공기관이 관리하는 데이터가 일정 수준의 품질을 확보할 수 있도록 데이터 관리체계를 잘 갖추고 데이터 품질수준을 파악하기 위해 실시하고 있습니다.</p>
+<table class="table-hover table-bordered table">
+<caption>공공데이터 품질관리 수준평가 지표</caption>
+<thead>
+<tr class="header">
+<th>번호</th>
+<th>지표</th>
+<th>배점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>품질진단 절차 별 일정 준수</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>품질관리 계획수립</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>예방적 품질관리 진단</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>데이터 표준 확산</strong></td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>데이터 구조 안정화</strong></td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><strong>데이터 연계관리</strong></td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><strong>데이터 품질진단</strong></td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><strong>품질진단 결과조치</strong></td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><strong>데이터 오류율</strong></td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>오류신고 요구사항 분석 및 개선</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>개방 데이터 품질수준</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>가점 지표 1</td>
+<td>예방적품질관리 진단 및 주요DB 품질진단 컨설팅</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>가점 지표 2</td>
+<td>대상 DB 35개 초과 선정 및 진단</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>위 지표 중 4~9번 지표는 기관에서 관리하는 정보시스템에 대한 <strong>DB의 품질을 평가</strong>하는데 목적이 있으며 평가에 대응하기 위해서는 <strong>데이터 표준화와 데이터 품질관리</strong>에 대한 이해가 필요합니다.</p>
+</section>
+<section id="데이터-표준화" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-표준화">데이터 표준화</h2>
+<p>데이터 표준화에 대한 내용은 구글링을 통해 쉽게 찾아낼 수 있습니다. 정확한 개념과 이론을 이해하기 위해서는 다음 페이지가 가장 도움이 됩니다.</p>
+<ul>
+<li><p><a href="https://dataonair.or.kr/db-tech-reference/d-guide/da-guide/">Data on-air DA 가이드</a> : 데이터 표준화에 대한 개념과 일반적인 데이터 표준화 프로세스를 알 수 있습니다.</p></li>
+<li><p><a href="https://gooddata.kmaclxp.co.kr/gnu/bbs/board.php?bo_table=notice&amp;wr_id=295">공공데이터베이스 표준화 관리 매뉴얼</a> : 공공데이터에 대한 표준화 관리 방법을 알 수 있습니다.</p></li>
+</ul>
+<p><a href="https://dataonair.or.kr/db-tech-reference/d-guide/da-guide/?pageid=6&amp;mod=document&amp;uid=269">Data on-air DA 가이드-데이터 표준화 개념</a>에 따르면, <strong>데이터 표준화는 시스템별로 산재해 있는 데이터 정보 요소에 대한 명칭, 정의, 형식, 규칙에 대한 원칙을 수립하여 이를 전사적으로 적용하는 것</strong>으로 정의하고 있습니다.</p>
+<p>DB를 예로 들면 테이블을 생성할 때 다음과 같은 SQL을 통해 생성합니다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">create</span> <span class="kw">table</span> 테이블명 (</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    컬럼명1 데이터유형1 제약조건1,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    컬럼명2 데이터유형2 제약조건2,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">..</span>.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이때 임의로 컬럼명, 데이터유형, 제약조건을 정하지 않고 기업/기관에서 관리하고 있는 표준에 따라 정해야 합니다. 이를 통해 동일한 의미를 갖지만 다른 컬럼명을 쓰거나 동일한 컬럼명을 쓰지만 다른 의미로 사용되는 경우를 방지할 수가 있습니다.</p>
+<p>즉, <strong>표준화란 서로 다른 명칭과 유형을 가진 동일한 대상을 하나의 명칭과 유형으로 통일하는 것</strong>으로 볼 수 있습니다.</p>
+<div class="cell" data-fig-width="10">
+<div class="cell-output-display">
+<div>
+<div>
+
+<pre class="mermaid mermaid-js">classDiagram
+    표준_table &lt;|-- table1
+    표준_table &lt;|-- table2 
+    표준_table &lt;|-- table3 
+    표준_table : 성명
+    표준_table : 성별
+    표준_table : 주소
+    표준_table : 전화번호
+    class table1{
+      이름
+      남여구분
+      집주소
+      연락처
+    }
+    class table2{
+      성함
+      성별
+      주소지
+      휴대번호
+    }
+    class table3{
+      성명
+      성별
+      주소
+      전화번호
+    }
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="데이터-표준화가-필요한-이유" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-표준화가-필요한-이유">데이터 표준화가 필요한 이유</h2>
+<table class="table-hover table-bordered table">
+<caption></caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>데이터 표준화 미적용</th>
+<th>데이터 표준화 적용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li><p><strong>컬럼명 의미 혼재</strong></p>
+<ul>
+<li><p>컬럼명이 동일하지만 의미가 다르거나 의미는 같지만 컬럼명이 다른 경우가 존재</p></li>
+<li><p>의사소통에 문제가 발생</p></li>
+</ul></li>
+</ul></td>
+<td><ul>
+<li><p><strong>컬럼명 통일</strong></p>
+<ul>
+<li><p>동일한 의미의 데이터는 동일한 명칭을 사용</p></li>
+<li><p>원활한 의사소통 가능</p></li>
+</ul></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><ul>
+<li><p><strong>필요 데이터 위치 파악 문제</strong></p>
+<ul>
+<li>정해진 표준이 없기 때문에 필요한 정보가 무슨 컬럼명으로 정의되어 있는지 파악하는데 시간이 소요</li>
+</ul></li>
+</ul></td>
+<td><ul>
+<li><p><strong>필요 데이터 위치 파악 원활</strong></p>
+<ul>
+<li>표준에 따라 필요한 데이터의 위치를 쉽게 파악 가능</li>
+</ul></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><ul>
+<li><p><strong>데이터 통합의 어려움</strong></p>
+<ul>
+<li><p>데이터 결합 시 데이터 의미 파악에 많은 시간을 사용</p></li>
+<li><p>같은 의미의 컬럼을 결합 시 사용되는 데이터 형식, 단위, 코드값이 다를 수 있기 때문에 추가 정제 작업이 필요</p></li>
+</ul></li>
+</ul></td>
+<td><ul>
+<li><p><strong>데이터 통합 용이</strong></p>
+<ul>
+<li><p>정의된 표준을 이해하고 있으면 데이터 의미 파악에 드는 시간 감소</p></li>
+<li><p>같은 의미의 컬럼을 결합 시 추가 정제 작업이 필요 없음</p></li>
+</ul></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><ul>
+<li><p><strong>데이터 품질 문제</strong></p>
+<ul>
+<li><p>컬럼에 대한 도메인이 정의되지 않음</p></li>
+<li><p>오류 데이터가 입력될 가능성 높음</p></li>
+</ul></li>
+</ul></td>
+<td><ul>
+<li><p><strong>데이터 품질 향상</strong></p>
+<ul>
+<li><p>컬럼에 대한 도메인이 명확하게 정의</p></li>
+<li><p>오류 데이터가 입력될 가능성이 낮음</p></li>
+</ul></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="데이터-표준-구성요소" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-표준-구성요소">데이터 표준 구성요소</h2>
+<p>표준 관리 체계에 따라 컬럼을 만들하기 위해서는 먼저 표준 사전을 정의해야 합니다. 표준 사전은 단어, 도메인, 코드, 용어로 구성 되어 있습니다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>아래 설명은 공공데이터 표준 관리 체계 기준으로 작성했습니다.</dt>
+<dd>
+<p>세부적인 내용은 기업마다 상이할 수 있습니다.</p>
+</dd>
+</dl>
+</div>
+</div>
+<section id="표준-단어" class="level3">
+<h3 class="anchored" data-anchor-id="표준-단어">표준 단어</h3>
+<p>업무상 사용하는 일정한 의미를 갖는 최소 단위을 의미합니다.</p>
+<table class="table-hover table-bordered table">
+<caption>표준단어 예시</caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 19%">
+<col style="width: 26%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>표준단어명</th>
+<th>단어영문약어명</th>
+<th>단어영문명</th>
+<th>형식단어여부</th>
+<th>도메인분류명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IP</td>
+<td>IP</td>
+<td>Internet Protocol</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>주소</td>
+<td>ADDR</td>
+<td>Address</td>
+<td>Y</td>
+<td>주소</td>
+</tr>
+<tr class="odd">
+<td>가맹점</td>
+<td>FRCS</td>
+<td>Franchise</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>명</td>
+<td>NM</td>
+<td>Name</td>
+<td>Y</td>
+<td>명</td>
+</tr>
+<tr class="odd">
+<td>법정동</td>
+<td>STDG</td>
+<td>Statutory Dong</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>시도</td>
+<td>CTPV</td>
+<td>Cities And Provinces</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>코드</td>
+<td>CD</td>
+<td>Code</td>
+<td>Y</td>
+<td>코드</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="표준-도메인" class="level3">
+<h3 class="anchored" data-anchor-id="표준-도메인">표준 도메인</h3>
+<p>업무적인 용도, 사용 빈도와 데이터의 물리적인 특성 등을 고려하여 도메인을 분류하고 데이터 타입，길이 등을 표준화하여 표준 도메인을 정의합니다.</p>
+<p>도메인명은 표준단어로 만들어지며 마지막 단어는 형식단어가 들어가야 합니다.</p>
+<table class="table-hover table-bordered table">
+<caption>표준도메인 예시</caption>
+<thead>
+<tr class="header">
+<th>도메인분류</th>
+<th>도메인명</th>
+<th>데이터타입</th>
+<th>데이터길이</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>주소</td>
+<td>주소V15</td>
+<td>VARCHAR</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>명</td>
+<td>명V200</td>
+<td>VARCHAR</td>
+<td>200</td>
+</tr>
+<tr class="odd">
+<td>코드</td>
+<td>코드C2</td>
+<td>CHAR</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="표준-용어" class="level3">
+<h3 class="anchored" data-anchor-id="표준-용어">표준 용어</h3>
+<p>표준 단어, 표준 도메인을 활용하여 용어를 정의합니다. 정의된 용어는 컬럼을 생성할 때 사용됩니다.</p>
+<p>표준용어명은 표준단어의 조합으로 만들어지며 마지막 단어는 형식단어가 들어가야 합니다. 일반적으로 도메인명을 용어 끝에 붙여서 사용합니다.</p>
+<p>ex) 법정동시도코드(STDG_CTPV_CD) = 법정동(STDG) + 시도(CTPV) + 코드(CD)</p>
+<table class="table-hover table-bordered table">
+<caption>표준용어 예시</caption>
+<thead>
+<tr class="header">
+<th>표준용어명</th>
+<th>영문약어명</th>
+<th>표준도메인명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IP주소</td>
+<td>IP_ADDR</td>
+<td>주소V15</td>
+</tr>
+<tr class="even">
+<td>가맹점명</td>
+<td>FRCS_NM</td>
+<td>명V200</td>
+</tr>
+<tr class="odd">
+<td>법정동시도코드</td>
+<td>STDG_CTPV_CD</td>
+<td>코드C2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="표준-코드" class="level3">
+<h3 class="anchored" data-anchor-id="표준-코드">표준 코드</h3>
+<p>업무에서 사용되거나 필요한 모든 코드를 수집하여 통합한 사전입니다. 코드성 컬럼의 값은 표준 코드에 있는 코드값을 사용하도록 규정합니다.</p>
+<p>표준용어명은 표준단어의 조합으로 만들어지며 마지막 단어는 코드 도메인을 갖는 형식단어가 들어가야합니다.</p>
+<table class="table-hover table-bordered table">
+<caption>표준코드 예시</caption>
+<thead>
+<tr class="header">
+<th>한글코드명</th>
+<th>영문코드명</th>
+<th>코드값</th>
+<th>코드값의미</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>법정동시도코드</td>
+<td>STDG_CTPV_CD</td>
+<td>11</td>
+<td>서울특별시</td>
+</tr>
+<tr class="even">
+<td>법정동시도코드</td>
+<td>STDG_CTPV_CD</td>
+<td>51</td>
+<td>강원특별자치도</td>
+</tr>
+<tr class="odd">
+<td>법정동시도코드</td>
+<td>STDG_CTPV_CD</td>
+<td>41</td>
+<td>경기도</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="데이터-품질관리" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-품질관리">데이터 품질관리</h2>
+<p>양질의 데이터를 확보하기 위해서는 지속적인 데이터 품질관리 활동이 필요합니다. 품질관리 활동에는 표준화, 모델링, 데이터 값, 데이터 활용에 대한 관리가 있으며 데이터 품질을 측정하기 위한 지표가 있습니다.</p>
+<p>DB에 대한 공공데이터 품질관리 지표는 표준, 구조, 값, 연계 진단으로 이뤄져있습니다. 이를 통해 데이터에 대한 품질을 측정하고 오류 데이터를 발견하여 데이터 품질을 개선하고 있습니다.</p>
+<section id="표준-진단" class="level3">
+<h3 class="anchored" data-anchor-id="표준-진단">표준 진단</h3>
+<p>표준 진단은 DB 내 컬럼 중 표준 용어가 적용된 비율을 지표로 정하고 진단을 수행하게 됩니다.</p>
+<p>표준을 적용한 컬럼이라는 것은 세부적으로 다음을 의미합니다.</p>
+<ul>
+<li><p>물리컬럼명이 표준용어 영문약어명과 일치</p></li>
+<li><p>컬럼에 정의된 도메인(데이터 형식, 데이터 길이 등)이 표준용어과 표준도메인에 정의된 사항과 일치</p></li>
+</ul>
+<p>전체 컬럼의 개수 중 표준이 적용된 표준의 개수를 비율을 계산하면 표준적용율이 산출됩니다.</p>
+<p><span class="math display">\[
+표준적용률(\%) =  \frac{표준이\ 적용된\ 컬럼\ 개수}{전체\ 컬럼\ 개수} \times 100
+\]</span></p>
+</section>
+<section id="구조-진단" class="level3">
+<h3 class="anchored" data-anchor-id="구조-진단">구조 진단</h3>
+<p>구조 진단은 테이블정의서 및 컬럼정의서가 물리 DB 구조와 일치하는지 확인하는 진단입니다. 공공데이터 품질관리 수준평가에서는 4가지 종류의 현행화율을 산정하여 가장 낮은 현행화율을 점수에 반영합니다.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2024-04-16-opendata-qc_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>테이블현행화율(%) = <span class="math inline">\(\frac{n(테이블\ 정의서 \cap 물리\ DB\ 테이블)}{n(물리\ DB\ 테이블)} \times 100\)</span></p></li>
+<li><p>테이블정의서현행화율(%) = <span class="math inline">\(\frac{n(테이블\ 정의서 \cap 물리\ DB\ 테이블)}{n(테이블\ 정의서)} \times 100\)</span></p></li>
+<li><p>컬럼현행화율(%) = <span class="math inline">\(\frac{n(컬럼\ 정의서 \cap 물리\ DB\ 컬럼)}{n(물리\ DB\ 컬럼)} \times 100\)</span></p></li>
+<li><p>컬럼정의서현행화율(%) = <span class="math inline">\(\frac{n(컬럼\ 정의서 \cap 물리\ DB\ 컬럼)}{n(컬럼\ 정의서)} \times 100\)</span></p></li>
+</ul>
+</section>
+<section id="값-진단" class="level3">
+<h3 class="anchored" data-anchor-id="값-진단">값 진단</h3>
+<p>값 진단은 정해진 진단룰에 따라 데이터의 값을 확인하여 데이터 오류율을 진단합니다. 공공데이터에서는 범정부 진단 기준, 업무규칙을 정하여 진단룰을 설정하도록 되어 있습니다.</p>
+<table class="table-hover table-bordered table">
+<caption>범정부 진단 기준</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>순번</th>
+<th>진단기준</th>
+<th>진단내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>시간순서 일관성</td>
+<td>시간순서 관계를 갖는 컬럼 간의 데이터 오류 측정</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>선후관계 정확성</td>
+<td>선후관계를 가지는 컬럼 간의 데이터 오류 측정</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>컬럼 간 논리관계 일관성</td>
+<td>컬럼 간 논리적 일관성 오류를 측정</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>계산식</td>
+<td>계산 값이 정확하게 관리되고 있는지 측정</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>참조관계</td>
+<td>참조하는 컬럼과 참조되는 컬럼 사이의 일관성을 유지하고 있는지 측정</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>글자깨짐</td>
+<td>데이터 값에 깨진 글자 또는 완성된 한글이 아닌 오류 데이터가 입력되었는지 측정</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>공백, 특수문자</td>
+<td>데이터 값에 불필요한 공백과 특수문자가 입력되었는지 측정</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>필수값</td>
+<td>데이터의 특성 상 반드시 입력되어야 하는 값이 누락없이 입력되었는지 측정</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>중복데이터</td>
+<td>DB 내 두 개 이상 테이블(또는 파일)에 존재하는 동일한(중복) 데이터의 값 일치 여부 측정</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>날짜 도메인</td>
+<td>날짜 데이터 값이 유효한 범위를 벗어나거나 표준 형식을 위배하였는지 측정</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>번호 도메인</td>
+<td>번호생성 규칙을 위배하였는지 측정</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>여부 도메인</td>
+<td>컬럼에 저장된 값이 유효 값(표준으로 정의한 여부 값)으로 일관되게 적용되고 있는지 측정</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>코드 도메인</td>
+<td>표준으로 정의한 코드 값으로 일관되게 적용되고 있는지 측정</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>금액 도메인</td>
+<td>금액 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>수량 도메인</td>
+<td>수량 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>율 도메인</td>
+<td>율 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정</td>
+</tr>
+</tbody>
+</table>
+<table class="table-hover table-bordered table">
+<caption>업무규칙 예시</caption>
+<colgroup>
+<col style="width: 32%">
+<col style="width: 27%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>업무규칙설명</th>
+<th>대상 전체건수 SQL</th>
+<th>오류 데이터 추출 SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>시작일은 종료일보다 빠를 수 없다.</td>
+<td><code>select count(*) from table</code></td>
+<td><p><code>select start_date, end_date from table</code></p>
+<p><code>where start_date &gt; end_date</code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="연계-진단" class="level3">
+<h3 class="anchored" data-anchor-id="연계-진단">연계 진단</h3>
+<p>정보시스템(DB)에는 여러 기관과 연계되어 데이터를 송수신하는 경우가 있습니다. 이 경우 연계 데이터의 목록을 정의하고 송수신 내역을 주기적으로 점검하여 관련 산출물을 남겨야 합니다.</p>
+</section>
+</section>
+<section id="프로젝트-간-문제-해결" class="level2">
+<h2 class="anchored" data-anchor-id="프로젝트-간-문제-해결">프로젝트 간 문제 해결</h2>
+<p>데이터 품질관리에 대한 개념과 품질진단 툴(DA#, WDQ 등) 활용법만 읽어 보면 쉽게 끝날 수 있는 프로젝트로 보이지만 실무를 하다보니 여러가지 어려움이 있었습니다.</p>
+<section id="표준이-없었던-정보시스템db에-대한-표준-사전-정의" class="level3">
+<h3 class="anchored" data-anchor-id="표준이-없었던-정보시스템db에-대한-표준-사전-정의">표준이 없었던 정보시스템(DB)에 대한 표준 사전 정의</h3>
+<p>평가를 진행했던 DB 23개 중 대부분이 범정부 표준이 제정되기 이전에 구축되었기 때문에 표준이 적용되지 않은 상태였습니다. 만점을 얻기 위해서는 표준적용률 90% 이상을 달성해야하기 때문에 DB내 컬럼을 표준용어로 등록 후 표준도메인, 표준코드, 표준단어를 만들어야 하는 과정이 필요했습니다.</p>
+<div class="cell" data-fig-width="10">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A(DB 내 컬럼) --&gt; B[표준 용어]
+    B --&gt; C[표준 도메인]
+    B --&gt; D[표준 코드]
+    B --&gt; E[표준 단어]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>정의된 표준 용어로부터 표준 도메인, 표준 코드, 표준 단어를 만들어 내는 과정은 정해진 규칙에 따라 만들면 되기 때문에 어렵지 않습니다. 하지만 컬럼명에서 표준용어를 만들기 위해서는 <strong>각 컬럼명을 확인하여 적절한 도메인 분류명을 정의</strong>해줘야 했습니다. 평균적으로 DB 1개 당 등록해야할 표준 용어가 200개 정도라고 한다면 23개 DB를 모두 정의해줘야 했으므로 4600개의 도메인 분류명을 정의해야 했습니다.</p>
+<table class="table">
+<caption>도메인분류명 정의 전 표준용어{.hover .bordered}</caption>
+<thead>
+<tr class="header">
+<th>표준용어명</th>
+<th>영문약어명</th>
+<th>표준도메인명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IP주소</td>
+<td>IP_ADDR</td>
+<td>{적절한 도메인명}V15</td>
+</tr>
+<tr class="even">
+<td>가맹점명</td>
+<td>FRCS_NM</td>
+<td>{적절한 도메인명}V200</td>
+</tr>
+<tr class="odd">
+<td>법정동시도코드</td>
+<td>STDG_CTPV_CD</td>
+<td>{적절한 도메인명}C2</td>
+</tr>
+</tbody>
+</table>
+<p>수작업으로 컬럼명을 확인하고 분류명을 정하는 작업은 시간이 오래 걸리는 단순 반복 작업입니다. 이를 해결하기 위해 chat gpt API를 활용하여 <strong>도메인 분류 모델</strong>을 만들었습니다.</p>
+<div class="cell" data-fig-width="10">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[표준 용어] --&gt;|chat gpt API| B[도메인 분류명]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="컬럼명은-같지만-도메인이-다른-경우" class="level3">
+<h3 class="anchored" data-anchor-id="컬럼명은-같지만-도메인이-다른-경우">컬럼명은 같지만 도메인이 다른 경우</h3>
+<p>표준 등록만으로 표준적용율을 올릴 수 없는 경우가 있습니다. DB내 정의된 물리컬럼명은 같지만 정의된 도메인이 다른 경우 입니다. 표준 용어 사전에는 하나의 영문약어명만 등록될 수 있기 때문에 여러 도메인을 가진 동일한 물리컬럼명의 경우 하나의 도메인만 표준을 적용한 것으로 측정됩니다.</p>
+<table class="table-hover table-bordered table">
+<caption>컬럼명은 같지만 도메인이 다른 경우</caption>
+<thead>
+<tr class="header">
+<th>테이블명</th>
+<th>물리컬럼명</th>
+<th>데이터 타입</th>
+<th>데이터 길이</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>table1</td>
+<td>colname</td>
+<td>char</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>table2</td>
+<td>colname</td>
+<td>varchar</td>
+<td>200</td>
+</tr>
+<tr class="odd">
+<td>table3</td>
+<td>colname</td>
+<td>varchar</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>table4</td>
+<td>colname</td>
+<td>varchar</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>이 경우 정보시스템 유지보수 담당자와 미팅을 통해 물리컬럼명이나 도메인이 변경이 가능한 지 확인 후 불가능하다면 가장 많이 사용한 도메인을 표준용어의 도메인으로 등록하여 진단을 수행했습니다.</p>
+</section>
+<section id="프로파일링을-통한-업무규칙-생성" class="level3">
+<h3 class="anchored" data-anchor-id="프로파일링을-통한-업무규칙-생성">프로파일링을 통한 업무규칙 생성</h3>
+<p>공공데이터 품질관리 수준평가에서는 진단 대상 컬럼에 대해 진단룰을 설정해야합니다. 이를 위해 프로파일링이라는 과정을 통해 진단룰을 도출해야 합니다.</p>
+<p>프로파일링이란 실제 데이터의 통계 및 패턴 분석을 통해 오류가 추정되는 데이터를 찾아내는 기법입니다.</p>
+<hr>
+<p>raw 단계부터 데이터 분석을 수행하다 보면 데이터에 대한 특성 파악, 전처리에 시간이 많이 들곤 합니다. 만약 데이터 표준화와 데이터 품질관리가 잘 갖춰진 데이터라면 이 부분에 대한 시간이 많이 줄어들 수 있을 것으로 예상이 됩니다. 그 이유는,</p>
+<ul>
+<li>현행화된 메타데이터를 통해 데이터 특성을 쉽게 파악할 수 있습니다.</li>
+<li>표준화된 데이터이기 때문에 데이터 결합 과정이 수월합니다.</li>
+<li>데이터 품질관리 과정을 통해 산출된 지표를 통해 데이터 품질수준을 파악할 수 있고 고품질 데이터를 확보할 수 있습니다.</li>
+<li>전처리 과정에서 필요한 결측치, 이상치 도출에 대한 힌트를 얻을 수 있습니다.</li>
+</ul>
+<p>이 외에도 많은 장점이 있을 것입니다. OECD가 실시한 2023 공공데이터 평가에서 대한민국이 1위를 달성했고 공공데이터 포털 및 여러 플랫폼을 통해서 활용 가능성이 높은 데이터들이 많이 개방된 상태입니다. 앞으로도 공공데이터가 많은 가치를 창출할 수 있는 데이터로 발전할 것으로 기대가 됩니다.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="kyeonghwany/kyeonghwany_blog" data-repo-id="R_kgDOMjyFAw" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="ko" crossorigin="anonymous" async="">
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "공공데이터 품질관리 프로젝트"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "공공데이터 품질관리에 대한 개념과 제가 경험한 평가 대응 방법을 공유합니다."</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "김경환"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "image.png"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2024-04-16</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">  - 공공데이터</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">  - 데이터 품질관리</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">```{r include=FALSE}</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggvenn)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">font_add_google</span>(<span class="st">"Noto Sans KR"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_auto</span>()</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>2023년 7월, 전라북도 공공데이터 품질관리 용역를 수행했습니다. 결론적으로 중요 지표였던 **공공데이터 품질관리 수준평가 96점을 달성**하여 전라북도청 평가점수 최고점을 갱신했습니다. 데이터 표준화와 데이터 품질관리에 대한 실무를 접할 수 있는 사업이었습니다.</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## 품질관리 수준평가란?</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>정부에서는 매년 공공데이터법 제9조에 근거하여 공공데이터 개방, 활용, 품질 및 관리체계 등 공공데이터 제공 및 운영에 관한 실태를 파악하고 개선하기 위해 **공공데이터 제공 운영실태 평가**를 실시하고 있습니다.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>**공공데이터 품질관리 수준평가**는 공공데이터 제공 운영실태 평가 중 35점을 반영합니다.</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>| 평가영역                          | 배점(광역 기관 기준) |</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>|-----------------------------------|----------------------|</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>| 관리체계                          | 7                    |</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>| 개방                              | 35                   |</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>| 활용                              | 23                   |</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>| **공공데이터 품질관리 수준 평가** | 35                   |</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>| 기타                              | -1/건당              |</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>: 공공데이터 제공 운영실태 평가 지표 {.hover .bordered}</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>품질관리 수준평가는 공공기관이 관리하는 데이터가 일정 수준의 품질을 확보할 수 있도록 데이터 관리체계를 잘 갖추고 데이터 품질수준을 파악하기 위해 실시하고 있습니다.</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>| 번호        | 지표                                          | 배점 |</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>|-------------|-----------------------------------------------|------|</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>| 1           | 품질진단 절차 별 일정 준수                    | 2    |</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>| 2           | 품질관리 계획수립                             | 2    |</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>| 3           | 예방적 품질관리 진단                          | 12   |</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>| 4           | **데이터 표준 확산**                          | 10   |</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>| 5           | **데이터 구조 안정화**                        | 6    |</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>| 6           | **데이터 연계관리**                           | 8    |</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>| 7           | **데이터 품질진단**                           | 20   |</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>| 8           | **품질진단 결과조치**                         | 20   |</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>| 9           | **데이터 오류율**                             | 14   |</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>| 10          | 오류신고 요구사항 분석 및 개선                | 4    |</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>| 11          | 개방 데이터 품질수준                          | 2    |</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>| 가점 지표 1 | 예방적품질관리 진단 및 주요DB 품질진단 컨설팅 | 2    |</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>| 가점 지표 2 | 대상 DB 35개 초과 선정 및 진단                | 3    |</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>: 공공데이터 품질관리 수준평가 지표 {.hover .bordered}</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>위 지표 중 4\~9번 지표는 기관에서 관리하는 정보시스템에 대한 **DB의 품질을 평가**하는데 목적이 있으며 평가에 대응하기 위해서는 **데이터 표준화와 데이터 품질관리**에 대한 이해가 필요합니다.</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## 데이터 표준화</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>데이터 표준화에 대한 내용은 구글링을 통해 쉽게 찾아낼 수 있습니다. 정확한 개념과 이론을 이해하기 위해서는 다음 페이지가 가장 도움이 됩니다.</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Data on-air DA 가이드</span><span class="co">](https://dataonair.or.kr/db-tech-reference/d-guide/da-guide/)</span> : 데이터 표준화에 대한 개념과 일반적인 데이터 표준화 프로세스를 알 수 있습니다.</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">공공데이터베이스 표준화 관리 매뉴얼</span><span class="co">](https://gooddata.kmaclxp.co.kr/gnu/bbs/board.php?bo_table=notice&amp;wr_id=295)</span> : 공공데이터에 대한 표준화 관리 방법을 알 수 있습니다.</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Data on-air DA 가이드-데이터 표준화 개념</span><span class="co">](https://dataonair.or.kr/db-tech-reference/d-guide/da-guide/?pageid=6&amp;mod=document&amp;uid=269)</span>에 따르면, **데이터 표준화는 시스템별로 산재해 있는 데이터 정보 요소에 대한 명칭, 정의, 형식, 규칙에 대한 원칙을 수립하여 이를 전사적으로 적용하는 것**으로 정의하고 있습니다.</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>DB를 예로 들면 테이블을 생성할 때 다음과 같은 SQL을 통해 생성합니다.</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="in">``` sql</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="kw">create</span> <span class="kw">table</span> 테이블명 (</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    컬럼명1 데이터유형1 제약조건1,</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    컬럼명2 데이터유형2 제약조건2,</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    <span class="op">..</span><span class="ch">.</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>이때 임의로 컬럼명, 데이터유형, 제약조건을 정하지 않고 기업/기관에서 관리하고 있는 표준에 따라 정해야 합니다. 이를 통해 동일한 의미를 갖지만 다른 컬럼명을 쓰거나 동일한 컬럼명을 쓰지만 다른 의미로 사용되는 경우를 방지할 수가 있습니다.</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>즉, **표준화란 서로 다른 명칭과 유형을 가진 동일한 대상을 하나의 명칭과 유형으로 통일하는 것**으로 볼 수 있습니다.</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>%%| fig<span class="ot">-w</span>idth: <span class="dv">10</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>classDiagram</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    표준_table &lt;|-- table1</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    표준_table &lt;|-- table2 </span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>    표준_table &lt;|-- table3 </span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>    표준_table : 성명</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>    표준_table : 성별</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>    표준_table : 주소</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>    표준_table : 전화번호</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    class table1{</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>      이름</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>      남여구분</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>      집주소</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>      연락처</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>    class table2{</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>      성함</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>      성별</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>      주소지</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>      휴대번호</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>    class table3{</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>      성명</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>      성별</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>      주소</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>      전화번호</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## 데이터 표준화가 필요한 이유</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>| 데이터 표준화 미적용                                                                                              | 데이터 표준화 적용                                                      |</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>+===================================================================================================================+=========================================================================+</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>| -   **컬럼명 의미 혼재**                                                                                          | -   **컬럼명 통일**                                                     |</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>|                                                                                                                   |                                                                         |</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>|     -   컬럼명이 동일하지만 의미가 다르거나 의미는 같지만 컬럼명이 다른 경우가 존재                               |     -   동일한 의미의 데이터는 동일한 명칭을 사용                       |</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>|                                                                                                                   |                                                                         |</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>|     -   의사소통에 문제가 발생                                                                                    |     -   원활한 의사소통 가능                                            |</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>| -   **필요 데이터 위치 파악 문제**                                                                                | -   **필요 데이터 위치 파악 원활**                                      |</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>|                                                                                                                   |                                                                         |</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>|     -   정해진 표준이 없기 때문에 필요한 정보가 무슨 컬럼명으로 정의되어 있는지 파악하는데 시간이 소요            |     -   표준에 따라 필요한 데이터의 위치를 쉽게 파악 가능               |</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+</span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>| -   **데이터 통합의 어려움**                                                                                      | -   **데이터 통합 용이**                                                |</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>|                                                                                                                   |                                                                         |</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>|     -   데이터 결합 시 데이터 의미 파악에 많은 시간을 사용                                                        |     -   정의된 표준을 이해하고 있으면 데이터 의미 파악에 드는 시간 감소 |</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>|                                                                                                                   |                                                                         |</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>|     -   같은 의미의 컬럼을 결합 시 사용되는 데이터 형식, 단위, 코드값이 다를 수 있기 때문에 추가 정제 작업이 필요 |     -   같은 의미의 컬럼을 결합 시 추가 정제 작업이 필요 없음           |</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>| -   **데이터 품질 문제**                                                                                          | -   **데이터 품질 향상**                                                |</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>|                                                                                                                   |                                                                         |</span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>|     -   컬럼에 대한 도메인이 정의되지 않음                                                                        |     -   컬럼에 대한 도메인이 명확하게 정의                              |</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>|                                                                                                                   |                                                                         |</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>|     -   오류 데이터가 입력될 가능성 높음                                                                          |     -   오류 데이터가 입력될 가능성이 낮음                              |</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>: {tbl-colwidths="<span class="sc">\[</span>50,50<span class="sc">\]</span>" .hover .bordered}</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## 데이터 표준 구성요소</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>표준 관리 체계에 따라 컬럼을 만들하기 위해서는 먼저 표준 사전을 정의해야 합니다. 표준 사전은 단어, 도메인, 코드, 용어로 구성 되어 있습니다.</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>아래 설명은 공공데이터 표준 관리 체계 기준으로 작성했습니다.</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>:   세부적인 내용은 기업마다 상이할 수 있습니다.</span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="fu">### 표준 단어</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>업무상 사용하는 일정한 의미를 갖는 최소 단위을 의미합니다.</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>| 표준단어명 | 단어영문약어명 | 단어영문명           | 형식단어여부 | 도메인분류명 |</span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>+============+================+======================+==============+==============+</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>| IP         | IP             | Internet Protocol    | N            |              |</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>| 주소       | ADDR           | Address              | Y            | 주소         |</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>| 가맹점     | FRCS           | Franchise            | N            |              |</span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>| 명         | NM             | Name                 | Y            | 명           |</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>| 법정동     | STDG           | Statutory Dong       | N            |              |</span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>| 시도       | CTPV           | Cities And Provinces | N            |              |</span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>| 코드       | CD             | Code                 | Y            | 코드         |</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>+------------+----------------+----------------------+--------------+--------------+</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>: 표준단어 예시 {.hover .bordered}</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a><span class="fu">### 표준 도메인</span></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>업무적인 용도, 사용 빈도와 데이터의 물리적인 특성 등을 고려하여 도메인을 분류하고 데이터 타입，길이 등을 표준화하여 표준 도메인을 정의합니다.</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>도메인명은 표준단어로 만들어지며 마지막 단어는 형식단어가 들어가야 합니다.</span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>| 도메인분류 | 도메인명 | 데이터타입 | 데이터길이 |</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>|------------|----------|------------|------------|</span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>| 주소       | 주소V15  | VARCHAR    | 15         |</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>| 명         | 명V200   | VARCHAR    | 200        |</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>| 코드       | 코드C2   | CHAR       | 2          |</span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>: 표준도메인 예시 {.hover .bordered}</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="fu">### 표준 용어</span></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>표준 단어, 표준 도메인을 활용하여 용어를 정의합니다. 정의된 용어는 컬럼을 생성할 때 사용됩니다.</span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>표준용어명은 표준단어의 조합으로 만들어지며 마지막 단어는 형식단어가 들어가야 합니다. 일반적으로 도메인명을 용어 끝에 붙여서 사용합니다.</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>ex) 법정동시도코드(STDG_CTPV_CD) = 법정동(STDG) + 시도(CTPV) + 코드(CD)</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>| 표준용어명     | 영문약어명   | 표준도메인명 |</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>|----------------|--------------|--------------|</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>| IP주소         | IP_ADDR      | 주소V15      |</span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>| 가맹점명       | FRCS_NM      | 명V200       |</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>| 법정동시도코드 | STDG_CTPV_CD | 코드C2       |</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>: 표준용어 예시 {.hover .bordered}</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a><span class="fu">### 표준 코드</span></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>업무에서 사용되거나 필요한 모든 코드를 수집하여 통합한 사전입니다. 코드성 컬럼의 값은 표준 코드에 있는 코드값을 사용하도록 규정합니다.</span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>표준용어명은 표준단어의 조합으로 만들어지며 마지막 단어는 코드 도메인을 갖는 형식단어가 들어가야합니다.</span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>| 한글코드명     | 영문코드명   | 코드값 | 코드값의미     |</span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>|----------------|--------------|--------|----------------|</span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>| 법정동시도코드 | STDG_CTPV_CD | 11     | 서울특별시     |</span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>| 법정동시도코드 | STDG_CTPV_CD | 51     | 강원특별자치도 |</span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>| 법정동시도코드 | STDG_CTPV_CD | 41     | 경기도         |</span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>: 표준코드 예시 {.hover .bordered}</span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a><span class="fu">## 데이터 품질관리</span></span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>양질의 데이터를 확보하기 위해서는 지속적인 데이터 품질관리 활동이 필요합니다. 품질관리 활동에는 표준화, 모델링, 데이터 값, 데이터 활용에 대한 관리가 있으며 데이터 품질을 측정하기 위한 지표가 있습니다.</span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>DB에 대한 공공데이터 품질관리 지표는 표준, 구조, 값, 연계 진단으로 이뤄져있습니다. 이를 통해 데이터에 대한 품질을 측정하고 오류 데이터를 발견하여 데이터 품질을 개선하고 있습니다.</span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a><span class="fu">### 표준 진단</span></span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>표준 진단은 DB 내 컬럼 중 표준 용어가 적용된 비율을 지표로 정하고 진단을 수행하게 됩니다.</span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>표준을 적용한 컬럼이라는 것은 세부적으로 다음을 의미합니다.</span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>물리컬럼명이 표준용어 영문약어명과 일치</span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>컬럼에 정의된 도메인(데이터 형식, 데이터 길이 등)이 표준용어과 표준도메인에 정의된 사항과 일치</span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>전체 컬럼의 개수 중 표준이 적용된 표준의 개수를 비율을 계산하면 표준적용율이 산출됩니다.</span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a>표준적용률(\%) =  \frac{표준이\ 적용된\ 컬럼\ 개수}{전체\ 컬럼\ 개수} \times 100</span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a><span class="fu">### 구조 진단</span></span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a>구조 진단은 테이블정의서 및 컬럼정의서가 물리 DB 구조와 일치하는지 확인하는 진단입니다. 공공데이터 품질관리 수준평가에서는 4가지 종류의 현행화율을 산정하여 가장 낮은 현행화율을 점수에 반영합니다.</span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo=FALSE, fig.align='center'}</span></span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">`</span><span class="at">컬럼정의서</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>,</span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a>          <span class="st">`</span><span class="at">물리DB컬럼</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">110</span>)</span>
+<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a><span class="fu">ggvenn</span>(a, <span class="fu">c</span>(<span class="st">"컬럼정의서"</span>, <span class="st">"물리DB컬럼"</span>),</span>
+<span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill_color =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"pink"</span>),</span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a>       <span class="at">set_name_size =</span> <span class="dv">10</span>,</span>
+<span id="cb2-257"><a href="#cb2-257" aria-hidden="true" tabindex="-1"></a>       <span class="at">text_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb2-258"><a href="#cb2-258" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"구조 현행화율 산출 예시"</span>) <span class="sc">+</span> </span>
+<span id="cb2-259"><a href="#cb2-259" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">30</span>))</span>
+<span id="cb2-260"><a href="#cb2-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-261"><a href="#cb2-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-262"><a href="#cb2-262" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>테이블현행화율(%) = $\frac{n(테이블\ 정의서 \cap 물리\ DB\ 테이블)}{n(물리\ DB\ 테이블)} \times 100$</span>
+<span id="cb2-263"><a href="#cb2-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>테이블정의서현행화율(%) = $\frac{n(테이블\ 정의서 \cap 물리\ DB\ 테이블)}{n(테이블\ 정의서)} \times 100$</span>
+<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>컬럼현행화율(%) = $\frac{n(컬럼\ 정의서 \cap 물리\ DB\ 컬럼)}{n(물리\ DB\ 컬럼)} \times 100$</span>
+<span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>컬럼정의서현행화율(%) = $\frac{n(컬럼\ 정의서 \cap 물리\ DB\ 컬럼)}{n(컬럼\ 정의서)} \times 100$</span>
+<span id="cb2-269"><a href="#cb2-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-270"><a href="#cb2-270" aria-hidden="true" tabindex="-1"></a><span class="fu">### 값 진단</span></span>
+<span id="cb2-271"><a href="#cb2-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-272"><a href="#cb2-272" aria-hidden="true" tabindex="-1"></a>값 진단은 정해진 진단룰에 따라 데이터의 값을 확인하여 데이터 오류율을 진단합니다. 공공데이터에서는 범정부 진단 기준, 업무규칙을 정하여 진단룰을 설정하도록 되어 있습니다.</span>
+<span id="cb2-273"><a href="#cb2-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-274"><a href="#cb2-274" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-275"><a href="#cb2-275" aria-hidden="true" tabindex="-1"></a>| 순번       | 진단기준                | 진단내용                                                                              |</span>
+<span id="cb2-276"><a href="#cb2-276" aria-hidden="true" tabindex="-1"></a>+============+=========================+=======================================================================================+</span>
+<span id="cb2-277"><a href="#cb2-277" aria-hidden="true" tabindex="-1"></a>| 1          | 시간순서 일관성         | 시간순서 관계를 갖는 컬럼 간의 데이터 오류 측정                                       |</span>
+<span id="cb2-278"><a href="#cb2-278" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-279"><a href="#cb2-279" aria-hidden="true" tabindex="-1"></a>| 2          | 선후관계 정확성         | 선후관계를 가지는 컬럼 간의 데이터 오류 측정                                          |</span>
+<span id="cb2-280"><a href="#cb2-280" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-281"><a href="#cb2-281" aria-hidden="true" tabindex="-1"></a>| 3          | 컬럼 간 논리관계 일관성 | 컬럼 간 논리적 일관성 오류를 측정                                                     |</span>
+<span id="cb2-282"><a href="#cb2-282" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-283"><a href="#cb2-283" aria-hidden="true" tabindex="-1"></a>| 4          | 계산식                  | 계산 값이 정확하게 관리되고 있는지 측정                                               |</span>
+<span id="cb2-284"><a href="#cb2-284" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a>| 5          | 참조관계                | 참조하는 컬럼과 참조되는 컬럼 사이의 일관성을 유지하고 있는지 측정                    |</span>
+<span id="cb2-286"><a href="#cb2-286" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a>| 6          | 글자깨짐                | 데이터 값에 깨진 글자 또는 완성된 한글이 아닌 오류 데이터가 입력되었는지 측정         |</span>
+<span id="cb2-288"><a href="#cb2-288" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-289"><a href="#cb2-289" aria-hidden="true" tabindex="-1"></a>| 7          | 공백, 특수문자          | 데이터 값에 불필요한 공백과 특수문자가 입력되었는지 측정                              |</span>
+<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-291"><a href="#cb2-291" aria-hidden="true" tabindex="-1"></a>| 8          | 필수값                  | 데이터의 특성 상 반드시 입력되어야 하는 값이 누락없이 입력되었는지 측정               |</span>
+<span id="cb2-292"><a href="#cb2-292" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-293"><a href="#cb2-293" aria-hidden="true" tabindex="-1"></a>| 9          | 중복데이터              | DB 내 두 개 이상 테이블(또는 파일)에 존재하는 동일한(중복) 데이터의 값 일치 여부 측정 |</span>
+<span id="cb2-294"><a href="#cb2-294" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-295"><a href="#cb2-295" aria-hidden="true" tabindex="-1"></a>| 10         | 날짜 도메인             | 날짜 데이터 값이 유효한 범위를 벗어나거나 표준 형식을 위배하였는지 측정               |</span>
+<span id="cb2-296"><a href="#cb2-296" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-297"><a href="#cb2-297" aria-hidden="true" tabindex="-1"></a>| 11         | 번호 도메인             | 번호생성 규칙을 위배하였는지 측정                                                     |</span>
+<span id="cb2-298"><a href="#cb2-298" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-299"><a href="#cb2-299" aria-hidden="true" tabindex="-1"></a>| 12         | 여부 도메인             | 컬럼에 저장된 값이 유효 값(표준으로 정의한 여부 값)으로 일관되게 적용되고 있는지 측정 |</span>
+<span id="cb2-300"><a href="#cb2-300" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-301"><a href="#cb2-301" aria-hidden="true" tabindex="-1"></a>| 13         | 코드 도메인             | 표준으로 정의한 코드 값으로 일관되게 적용되고 있는지 측정                             |</span>
+<span id="cb2-302"><a href="#cb2-302" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-303"><a href="#cb2-303" aria-hidden="true" tabindex="-1"></a>| 14         | 금액 도메인             | 금액 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정                         |</span>
+<span id="cb2-304"><a href="#cb2-304" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-305"><a href="#cb2-305" aria-hidden="true" tabindex="-1"></a>| 15         | 수량 도메인             | 수량 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정                         |</span>
+<span id="cb2-306"><a href="#cb2-306" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-307"><a href="#cb2-307" aria-hidden="true" tabindex="-1"></a>| 16         | 율 도메인               | 율 데이터 이외 문자가 입력되어 있는 컬럼의 데이터 오류 측정                           |</span>
+<span id="cb2-308"><a href="#cb2-308" aria-hidden="true" tabindex="-1"></a>+------------+-------------------------+---------------------------------------------------------------------------------------+</span>
+<span id="cb2-309"><a href="#cb2-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-310"><a href="#cb2-310" aria-hidden="true" tabindex="-1"></a>: 범정부 진단 기준 {.hover .bordered}</span>
+<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a>+-----------------------------------+------------------------------+------------------------------------------+</span>
+<span id="cb2-313"><a href="#cb2-313" aria-hidden="true" tabindex="-1"></a>| 업무규칙설명                      | 대상 전체건수 SQL            | 오류 데이터 추출 SQL                     |</span>
+<span id="cb2-314"><a href="#cb2-314" aria-hidden="true" tabindex="-1"></a>+===================================+==============================+==========================================+</span>
+<span id="cb2-315"><a href="#cb2-315" aria-hidden="true" tabindex="-1"></a>| 시작일은 종료일보다 빠를 수 없다. | <span class="in">`select count(*) from table`</span> | <span class="in">`select start_date, end_date from table`</span> |</span>
+<span id="cb2-316"><a href="#cb2-316" aria-hidden="true" tabindex="-1"></a>|                                   |                              |                                          |</span>
+<span id="cb2-317"><a href="#cb2-317" aria-hidden="true" tabindex="-1"></a>|                                   |                              | <span class="in">`where start_date &gt; end_date`</span>            |</span>
+<span id="cb2-318"><a href="#cb2-318" aria-hidden="true" tabindex="-1"></a>+-----------------------------------+------------------------------+------------------------------------------+</span>
+<span id="cb2-319"><a href="#cb2-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-320"><a href="#cb2-320" aria-hidden="true" tabindex="-1"></a>: 업무규칙 예시 {.hover .bordered}</span>
+<span id="cb2-321"><a href="#cb2-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-322"><a href="#cb2-322" aria-hidden="true" tabindex="-1"></a><span class="fu">### 연계 진단</span></span>
+<span id="cb2-323"><a href="#cb2-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-324"><a href="#cb2-324" aria-hidden="true" tabindex="-1"></a>정보시스템(DB)에는 여러 기관과 연계되어 데이터를 송수신하는 경우가 있습니다. 이 경우 연계 데이터의 목록을 정의하고 송수신 내역을 주기적으로 점검하여 관련 산출물을 남겨야 합니다.</span>
+<span id="cb2-325"><a href="#cb2-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-326"><a href="#cb2-326" aria-hidden="true" tabindex="-1"></a><span class="fu">## 프로젝트 간 문제 해결</span></span>
+<span id="cb2-327"><a href="#cb2-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-328"><a href="#cb2-328" aria-hidden="true" tabindex="-1"></a>데이터 품질관리에 대한 개념과 품질진단 툴(DA#, WDQ 등) 활용법만 읽어 보면 쉽게 끝날 수 있는 프로젝트로 보이지만 실무를 하다보니 여러가지 어려움이 있었습니다.</span>
+<span id="cb2-329"><a href="#cb2-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-330"><a href="#cb2-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### 표준이 없었던 정보시스템(DB)에 대한 표준 사전 정의</span></span>
+<span id="cb2-331"><a href="#cb2-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-332"><a href="#cb2-332" aria-hidden="true" tabindex="-1"></a>평가를 진행했던 DB 23개 중 대부분이 범정부 표준이 제정되기 이전에 구축되었기 때문에 표준이 적용되지 않은 상태였습니다. 만점을 얻기 위해서는 표준적용률 90% 이상을 달성해야하기 때문에 DB내 컬럼을 표준용어로 등록 후 표준도메인, 표준코드, 표준단어를 만들어야 하는 과정이 필요했습니다.</span>
+<span id="cb2-333"><a href="#cb2-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-336"><a href="#cb2-336" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb2-337"><a href="#cb2-337" aria-hidden="true" tabindex="-1"></a>%%| fig<span class="ot">-w</span>idth: <span class="dv">10</span></span>
+<span id="cb2-338"><a href="#cb2-338" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb2-339"><a href="#cb2-339" aria-hidden="true" tabindex="-1"></a>    A(DB 내 컬럼) --&gt; B[표준 용어]</span>
+<span id="cb2-340"><a href="#cb2-340" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[표준 도메인]</span>
+<span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a>    B --&gt; D[표준 코드]</span>
+<span id="cb2-342"><a href="#cb2-342" aria-hidden="true" tabindex="-1"></a>    B --&gt; E[표준 단어]</span>
+<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a>정의된 표준 용어로부터 표준 도메인, 표준 코드, 표준 단어를 만들어 내는 과정은 정해진 규칙에 따라 만들면 되기 때문에 어렵지 않습니다. 하지만 컬럼명에서 표준용어를 만들기 위해서는 **각 컬럼명을 확인하여 적절한 도메인 분류명을 정의**해줘야 했습니다. 평균적으로 DB 1개 당 등록해야할 표준 용어가 200개 정도라고 한다면 23개 DB를 모두 정의해줘야 했으므로 4600개의 도메인 분류명을 정의해야 했습니다.</span>
+<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a>| 표준용어명     | 영문약어명   | 표준도메인명          |</span>
+<span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a>|----------------|--------------|-----------------------|</span>
+<span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a>| IP주소         | IP_ADDR      | {적절한 도메인명}V15  |</span>
+<span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a>| 가맹점명       | FRCS_NM      | {적절한 도메인명}V200 |</span>
+<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a>| 법정동시도코드 | STDG_CTPV_CD | {적절한 도메인명}C2   |</span>
+<span id="cb2-352"><a href="#cb2-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a>: 도메인분류명 정의 전 표준용어{.hover .bordered}</span>
+<span id="cb2-354"><a href="#cb2-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a>수작업으로 컬럼명을 확인하고 분류명을 정하는 작업은 시간이 오래 걸리는 단순 반복 작업입니다. 이를 해결하기 위해 chat gpt API를 활용하여 **도메인 분류 모델**을 만들었습니다.</span>
+<span id="cb2-356"><a href="#cb2-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a>%%| fig<span class="ot">-w</span>idth: <span class="dv">10</span></span>
+<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a>    A[표준 용어] --&gt;|chat gpt API| B[도메인 분류명]</span>
+<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a><span class="fu">### 컬럼명은 같지만 도메인이 다른 경우</span></span>
+<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a>표준 등록만으로 표준적용율을 올릴 수 없는 경우가 있습니다. DB내 정의된 물리컬럼명은 같지만 정의된 도메인이 다른 경우 입니다. 표준 용어 사전에는 하나의 영문약어명만 등록될 수 있기 때문에 여러 도메인을 가진 동일한 물리컬럼명의 경우 하나의 도메인만 표준을 적용한 것으로 측정됩니다.</span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a>| 테이블명 | 물리컬럼명 | 데이터 타입 | 데이터 길이 |</span>
+<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a>|----------|------------|-------------|-------------|</span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>| table1   | colname    | char        | 10          |</span>
+<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>| table2   | colname    | varchar     | 200         |</span>
+<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a>| table3   | colname    | varchar     | 100         |</span>
+<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a>| table4   | colname    | varchar     | 100         |</span>
+<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a>: 컬럼명은 같지만 도메인이 다른 경우 {.hover .bordered}</span>
+<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>이 경우 정보시스템 유지보수 담당자와 미팅을 통해 물리컬럼명이나 도메인이 변경이 가능한 지 확인 후 불가능하다면 가장 많이 사용한 도메인을 표준용어의 도메인으로 등록하여 진단을 수행했습니다.</span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a><span class="fu">### 프로파일링을 통한 업무규칙 생성</span></span>
+<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>공공데이터 품질관리 수준평가에서는 진단 대상 컬럼에 대해 진단룰을 설정해야합니다. 이를 위해 프로파일링이라는 과정을 통해 진단룰을 도출해야 합니다.</span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a>프로파일링이란 실제 데이터의 통계 및 패턴 분석을 통해 오류가 추정되는 데이터를 찾아내는 기법입니다.</span>
+<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a>raw 단계부터 데이터 분석을 수행하다 보면 데이터에 대한 특성 파악, 전처리에 시간이 많이 들곤 합니다. 만약 데이터 표준화와 데이터 품질관리가 잘 갖춰진 데이터라면 이 부분에 대한 시간이 많이 줄어들 수 있을 것으로 예상이 됩니다. 그 이유는,</span>
+<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>현행화된 메타데이터를 통해 데이터 특성을 쉽게 파악할 수 있습니다.</span>
+<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>표준화된 데이터이기 때문에 데이터 결합 과정이 수월합니다.</span>
+<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>데이터 품질관리 과정을 통해 산출된 지표를 통해 데이터 품질수준을 파악할 수 있고 고품질 데이터를 확보할 수 있습니다.</span>
+<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>전처리 과정에서 필요한 결측치, 이상치 도출에 대한 힌트를 얻을 수 있습니다.</span>
+<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a>이 외에도 많은 장점이 있을 것입니다. OECD가 실시한 2023 공공데이터 평가에서 대한민국이 1위를 달성했고 공공데이터 포털 및 여러 플랫폼을 통해서 활용 가능성이 높은 데이터들이 많이 개방된 상태입니다. 앞으로도 공공데이터가 많은 가치를 창출할 수 있는 데이터로 발전할 것으로 기대가 됩니다.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>
