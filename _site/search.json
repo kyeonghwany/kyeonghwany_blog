@@ -112,6 +112,48 @@
     "text": "github 연결\n본인의 git을 github과 연결하기 위해서는 shh키를 생성하여 연결해야 합니다. 여러 방법이 있겠지만 Rstudio를 사용한다면 쉽게 연결할 수 있습니다.\n\nrstudio에서 연결하는 방법\n\nrstudio &gt; Tools &gt; Global Options &gt; Git.SVN에서 ssh키 생성하고,\ngithub계정에 ssh키 등록합니다.\n\n\n\n터미널에서 연결하는 방법\ncd ~\nssh-keygen\ncd ~/.ssh\ncat id_rsa.pub\n이후 나타난 문자열을 복사하여 github에 등록합니다."
   },
   {
+    "objectID": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html",
+    "href": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html",
+    "title": "Callout Blocks 사용 방법",
+    "section": "",
+    "text": "Callout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\nnotetipwarningcautionimportant\n\n\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-tip}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nTip\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-warning}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nWarning\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-caution}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nCaution\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-important}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nImportant\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html#callout-blocks",
+    "href": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html#callout-blocks",
+    "title": "Callout Blocks 사용 방법",
+    "section": "",
+    "text": "Callout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\nnotetipwarningcautionimportant\n\n\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-tip}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nTip\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-warning}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nWarning\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-caution}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nCaution\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-important}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nImportant\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```"
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "",
+    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```"
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#다양한-언어에-맞는-디자인-적용",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#다양한-언어에-맞는-디자인-적용",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "다양한 언어에 맞는 디자인 적용",
+    "text": "다양한 언어에 맞는 디자인 적용\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있수 있습니다. 140가지 이상의 언어를 지원합니다.\n\n\n\n\n\n\n\ninput\n``` r\ncode &lt;- 1\n```\n\n\noutput\ncode &lt;- 1\n\n\n\n지원하지 않는 언어는 defalut를 사용하여 그럴듯한 디자인을 적용해줍니다.\n\n\n\n\n\n\n\ninput\n``` defalut\ncode = 1\n```\n\n\noutput\ncode = 1"
+  },
+  {
+    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#파일명-프로그램명-명시",
+    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#파일명-프로그램명-명시",
+    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
+    "section": "파일명, 프로그램명 명시",
+    "text": "파일명, 프로그램명 명시\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면 다음과 같이 작성합니다.\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1\n\n\n\n\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\nR\n\ncode = 1"
+  },
+  {
     "objectID": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html",
     "href": "posts/2023-09-17-qmd_to_github_pages/2023-09-17-qmd_to_github_pages.html",
     "title": "GitHub Pages기능을 이용해 Quarto 배포",
@@ -287,115 +329,10 @@
     "text": "_quarto.yml 수정\n마지막으로 _quarto.yml에 “custom.scss”를 선언하여 웹사이트에 적용되도록 합니다.\n\n\n_quarto.yml\n\nformat:\n  html:\n    theme:\n      - custom.scss\n\n만약 Quarto에서 제공하는 테마를 사용하고 있다면 다음과 같이 _quarto.yml를 수정합니다.\n\n\n_quarto.yml\n\nformat:\n  html:\n    theme:\n      - minty\n      - custom.scss"
   },
   {
-    "objectID": "posts/quarto.html",
-    "href": "posts/quarto.html",
-    "title": "qmd파일에서 코드를 작성하는 방법",
-    "section": "",
-    "text": "qmd에서 코드블럭을 작성할 때 ```로 감싸서 작성\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있다. 140가지 언어를 지원.\ndefalut를 사용하면 지원하지 않는는 언어도 유사하게 처리를 해준다.\n``` r\ncode &lt;- 1\n```\n``` defalut\ncode = 1\n```\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면,\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
-  },
-  {
-    "objectID": "posts/quarto.html#코드-작성",
-    "href": "posts/quarto.html#코드-작성",
-    "title": "qmd파일에서 코드를 작성하는 방법",
-    "section": "",
-    "text": "qmd에서 코드블럭을 작성할 때 ```로 감싸서 작성\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있다. 140가지 언어를 지원.\ndefalut를 사용하면 지원하지 않는는 언어도 유사하게 처리를 해준다.\n``` r\ncode &lt;- 1\n```\n``` defalut\ncode = 1\n```\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면,\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
-  },
-  {
-    "objectID": "posts/quarto.html#callout-blocks",
-    "href": "posts/quarto.html#callout-blocks",
-    "title": "qmd파일에서 코드를 작성하는 방법",
-    "section": "Callout Blocks",
-    "text": "Callout Blocks\nCallout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
-  },
-  {
-    "objectID": "posts/quarto.html#단축키-표시",
-    "href": "posts/quarto.html#단축키-표시",
-    "title": "qmd파일에서 코드를 작성하는 방법",
-    "section": "단축키 표시",
-    "text": "단축키 표시\n\ninput\n\n{{&lt; kbd Shift-Ctrl-P &gt;}}\n\noutput\n\nShift-Ctrl-P"
-  },
-  {
-    "objectID": "posts/quarto.html#publishing",
-    "href": "posts/quarto.html#publishing",
-    "title": "qmd파일에서 코드를 작성하는 방법",
-    "section": "Publishing",
-    "text": "Publishing\nquarto 문서를 만들었다면 다양한 루트로 Publishing이 가능하다.\n\ngithub pages\ngithub pages는 docs라는 디렉토리에서 렌더링 되기때문에 _quarto.yml에 다음 코드를 추가해줘야 한다.\n\n\n_quarto.yml\n\nproject:\n  type: website\n  output-dir: docs\n\n그리고 .nojekyll도 추가, window11에서 Rstudio terminal를 이용 시 copy가 실행되지 않았는데 오히려 touch는 잘 작동되었다.\n\n\n\n\n\n\n\nMac/Linux\n\n\nTerminal\n\ntouch .nojekyll\n\n\n\nWindows\n\n\nTerminal\n\ncopy NUL .nojekyll\n\n\n\n\ngithub pages에 Publishing할때 필요 없는 디렉토리는 .gitignore에 추가하는 것이 좋다. github pages에서 _site, _book등 디렉토리는 모두 docs에서 render되기 때문이다.\n\n\n.gitignore\n\n/.quarto/\n/_site/\n\n만약 이미 push했다면,\n\n\nTerminal\n\ngit rm -r _site\n\n이후 render 후 git에 push\n\n\nTerminal\n\nquarto render\ngit push"
-  },
-  {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "Posts",
     "section": "",
     "text": "Quarto website 글꼴 적용 방법\n\n\n\n\n\n\n\nquarto\n\n\nscss\n\n\n\n\nQuarto website의 폰트를 scss를 수정하여 바꾸기\n\n\n\n\n\n\nMay 7, 2024\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\ndocker를 이용하여 Rstudio-server 설치하기\n\n\n\n\n\n\n\ndocker\n\n\nR\n\n\n\n\nwindows에서 wsl + docker + Rstudio-server 환경 구축 방법을 정리\n\n\n\n\n\n\nApr 26, 2024\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\n공공데이터 품질관리 프로젝트\n\n\n\n\n\n\n\n공공데이터\n\n\n데이터 품질관리\n\n\n\n\n공공데이터 품질관리에 대한 개념과 제가 경험한 평가 대응 방법을 공유합니다.\n\n\n\n\n\n\nApr 16, 2024\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nCallout Blocks 사용 방법\n\n\n\n\n\n\n\nquarto\n\n\n\n\nQuarto에서 Callout Blocks을 사용하여 효과적인 디지털 글쓰기\n\n\n\n\n\n\nSep 17, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nQuarto 문서에서 코드 블럭을 작성하는 방법\n\n\n\n\n\n\n\nquarto\n\n\n\n\nqmd 문서에서 여러 언어에 맞는 디자인을 적용하여 코드 블럭 작성하는 방법입니다.\n\n\n\n\n\n\nSep 17, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nGitHub Pages기능을 이용해 Quarto 배포\n\n\n\n\n\n\n\nquarto\n\n\ngithub\n\n\n\n\nQuarto에서 만든 웹사이트, 블로그를 GitHub Pages 기능을 활용해 배포하는 방법입니다.\n\n\n\n\n\n\nSep 17, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\ngit, github, Rstudio 연동하기\n\n\n\n\n\n\n\ngit\n\n\nrstudio\n\n\n\n\nRstudio에서 git과 github를 연동하는 방법입니다.\n\n\n\n\n\n\nJul 5, 2023\n\n\n김경환\n\n\n\n\n\n\n  \n\n\n\n\nWSL, R, conda 설치 방법\n\n\n\n\n\n\n\nwsl\n\n\nR\n\n\nconda\n\n\n\n\nwindow 환경과 리눅스(WSL) 환경에서 R과 conda를 설치하는 방법입니다.\n\n\n\n\n\n\nJun 5, 2023\n\n\n김경환\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
-    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
-    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
-    "section": "",
-    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있수 있습니다. 140가지 이상의 언어를 지원합니다.\n\n\n\n\n\n\n\ninput\n``` r\ncode &lt;- 1\n```\n\n\noutput\ncode &lt;- 1\n\n\n\n지원하지 않는 언어는 defalut를 사용하여 그럴듯한 디자인을 적용해줍니다.\n\n\n\n\n\n\n\ninput\n``` defalut\ncode = 1\n```\n\n\noutput\ncode = 1\n\n\n\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면 다음과 같이 작성합니다.\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
-  },
-  {
-    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-작성",
-    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-작성",
-    "title": "Quarto 문서에서 코드를 작성하는 방법",
-    "section": "",
-    "text": "qmd에서 코드블럭을 작성할 때 ```로 감싸서 작성\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있다. 140가지 언어를 지원.\ndefalut를 사용하면 지원하지 않는는 언어도 유사하게 처리를 해준다.\n``` r\ncode &lt;- 1\n```\n``` defalut\ncode = 1\n```\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면,\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
-  },
-  {
-    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#callout-blocks",
-    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#callout-blocks",
-    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
-    "section": "Callout Blocks",
-    "text": "Callout Blocks\nCallout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
-  },
-  {
-    "objectID": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
-    "href": "posts/2024-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
-    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
-    "section": "",
-    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있수 있습니다. 140가지 이상의 언어를 지원합니다.\n\n\n\n\n\n\n\ninput\n``` r\ncode &lt;- 1\n```\n\n\noutput\ncode &lt;- 1\n\n\n\n지원하지 않는 언어는 defalut를 사용하여 그럴듯한 디자인을 적용해줍니다.\n\n\n\n\n\n\n\ninput\n``` defalut\ncode = 1\n```\n\n\noutput\ncode = 1\n\n\n\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면 다음과 같이 작성합니다.\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1"
-  },
-  {
-    "objectID": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html",
-    "href": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html",
-    "title": "Callout Blocks 사용 방법",
-    "section": "",
-    "text": "Callout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\nnotetipwarningcautionimportant\n\n\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-tip}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nTip\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-warning}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nWarning\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-caution}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nCaution\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-important}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nImportant\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
-  },
-  {
-    "objectID": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html#callout-blocks",
-    "href": "posts/2023-09-17-callout_blocks/2023-09-17-callout_blocks.html#callout-blocks",
-    "title": "Callout Blocks 사용 방법",
-    "section": "",
-    "text": "Callout blocks는 글에서 강조를 하거나 보충, 주의를 표현할 수 있도록 합니다.\n\nnotetipwarningcautionimportant\n\n\n\ninput\n\n:::{.callout-note}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nNote\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-tip}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nTip\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-warning}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nWarning\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-caution}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nCaution\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important.\n\n\n\n\n\n\n\ninput\n\n:::{.callout-important}\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n: `note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\noutput\n\n\n\n\n\n\n\nImportant\n\n\n\n\nCallout blocks에는 5가지 옵션을 사용할 수 있습니다.\n\nnote, tip, warning, caution, and important."
-  },
-  {
-    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
-    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html",
-    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
-    "section": "",
-    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```"
-  },
-  {
-    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
-    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#코드-블럭-작성-방법",
-    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
-    "section": "",
-    "text": "qmd에서 코드블럭을 작성할 때는 ```로 감싸서 작성합니다.\n```\ncode\n```"
-  },
-  {
-    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#다양한-언어에-맞는-디자인-적용",
-    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#다양한-언어에-맞는-디자인-적용",
-    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
-    "section": "다양한 언어에 맞는 디자인 적용",
-    "text": "다양한 언어에 맞는 디자인 적용\n언어를 지정하여 언어에 맞는 디자인을 적용할 수 있수 있습니다. 140가지 이상의 언어를 지원합니다.\n\n\n\n\n\n\n\ninput\n``` r\ncode &lt;- 1\n```\n\n\noutput\ncode &lt;- 1\n\n\n\n지원하지 않는 언어는 defalut를 사용하여 그럴듯한 디자인을 적용해줍니다.\n\n\n\n\n\n\n\ninput\n``` defalut\ncode = 1\n```\n\n\noutput\ncode = 1"
-  },
-  {
-    "objectID": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#파일명-프로그램명-명시",
-    "href": "posts/2023-09-17-code_in_qmd/2023-09-17-code_in_qmd.html#파일명-프로그램명-명시",
-    "title": "Quarto 문서에서 코드 블럭을 작성하는 방법",
-    "section": "파일명, 프로그램명 명시",
-    "text": "파일명, 프로그램명 명시\n만약 코드의 파일명 또는 프로그램명을 명시하고싶다면 다음과 같이 작성합니다.\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\ntmp.r\n\ncode = 1\n\n\n\n\n\n\n\n\n\n\n\ninput\n``` {.r filename=\"tmp.r\"}\ncode = 1\n```\n\n\noutput\n\n\nR\n\ncode = 1"
   }
 ]

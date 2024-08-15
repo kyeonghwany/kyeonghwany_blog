@@ -3,8 +3,8 @@ project:
 
 website:
   title: "Kyeonghwany"
-  # site-url: 'https://kyeonghwany.github.io'
-  # site-path: '/'
+  site-url: 'https://kyeonghwany.netlify.app'
+  site-path: '/'
   
   search: true
   
