@@ -1,0 +1,17 @@
+/*-- scss:defaults --*/
+
+
+$headings-font-family:        "Hahmlet", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif:      "Noto Sans KR", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:       "Fira Code", "Nanum+Gothic+Coding";
+
+
+/*-- scss:rules --*/
+
+
+// Variables
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Hahmlet:wght@100..900&family=Nanum+Gothic+Coding:wght@700&family=Noto+Sans+KR:wght@100..900&display=swap";
+@if $web-font-path {
+  @import url($web-font-path);
+}

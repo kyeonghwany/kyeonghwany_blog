@@ -1,0 +1,40 @@
+---
+title: "git, github, Rstudio 연동하기"
+description: "Rstudio에서 git과 github를 연동하는 방법입니다."
+author: "김경환"
+image: "github.png"
+date: 2023-07-05
+categories:
+  - git
+  - rstudio
+---
+
+## git 설치 및 계정 입력
+
+먼저 git설치 및 github계정 생성 후 git bash에서 본인의 이메일과 이름을 입력합니다.
+
+``` bash
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+## github 연결
+
+본인의 git을 github과 연결하기 위해서는 shh키를 생성하여 연결해야 합니다. 여러 방법이 있겠지만 Rstudio를 사용한다면 쉽게 연결할 수 있습니다.
+
+### rstudio에서 연결하는 방법
+
+1.  rstudio \> Tools \> Global Options \> Git.SVN에서 ssh키 생성하고,
+
+2.  github계정에 ssh키 등록합니다.
+
+### 터미널에서 연결하는 방법
+
+``` powershell
+cd ~
+ssh-keygen
+cd ~/.ssh
+cat id_rsa.pub
+```
+
+이후 나타난 문자열을 복사하여 github에 등록합니다.

@@ -1,0 +1,196 @@
+---
+title: "WSL, R, conda 설치 방법"
+description: "window 환경과 리눅스(WSL) 환경에서 R과 conda를 설치하는 방법입니다."
+author: "김경환"
+image: "setting.png"
+date: 2023-06-05
+categories:
+  - wsl
+  - R
+  - conda
+---
+
+## R설치(jdk도 추가)
+
+1.  c드라이브에 R폴더 생성
+
+2.  설치파일 다운로드
+
+-   [R](https://cloud.r-project.org/)
+
+-   [Rstudio](https://posit.co/download/rstudio-desktop/)
+
+-   [Rtools](https://cloud.r-project.org/)
+
+-   [jdk](https://www.oracle.com/java/technologies/downloads/)
+
+3.  R과 Rstudio는 C:\\R에 관리자권한으로 설치(기본값으로)
+
+4.  jdk, Rtools는 기본 경로에 설치(기본값으로).
+
+## anaconda3 설치
+
+1.  [anaconda3](https://www.anaconda.com/download) 설치파일 다운로드 및 설치(기본값으로)
+
+## VS code 설치
+
+-   [vs code 설치링크](https://code.visualstudio.com/)
+
+-   path에 추가 옵션 선택
+
+## window11에서 wsl을 이용해 linux 설치
+
+-   [ms 공식 설명서1](https://learn.microsoft.com/ko-kr/windows/wsl/install)
+
+-   [ms 공식 설명서2](https://learn.microsoft.com/ko-kr/windows/wsl/setup/environment)
+
+1.  powershell열고 다음을 입력하여 linux설치
+
+``` powershell
+wsl --install
+```
+
+설치 후 컴퓨터를 다시 시작
+
+2.  사용자 이름 및 암호 설정
+
+컴퓨터를 다시 시작하면 바로 우분투 터미널 창이 열린다. 사용자 이름과 암호를 입력. 입력한 계정은 sudo 권한이 부여된다.
+
+3.  패키지 업데이트 및 업그레이드
+
+``` powershell
+sudo apt update && sudo apt upgrade
+```
+
+4.  vs code 확장팩 설치 및 연결
+
+-   [remote dev 확장팩](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) 설치
+
+-   우분투에서 `code .`을 입력하면 vs code로 연결됨
+
+-   윈도우 vs code에서 `ctrl+shift+p`를 통해서도 연결 가능
+
+## 우분투에서 R와 Rstudio-server 설치
+
+-   참고자료, 변할 수 있으니 확인 (지금은 우분투 22.04)
+
+    -   [rstudio-server download](https://posit.co/download/rstudio-server/)
+
+    -   [R 설치 간편설명](http://cran.rstudio.com/bin/linux/ubuntu/)
+
+    -   [R 설치 설명](https://cran.rstudio.com/bin/linux/ubuntu/fullREADME.html)
+
+1.  R설치
+
+``` powershell
+# update indices
+sudo apt update -qq
+# install two helper packages we need
+sudo apt install --no-install-recommends software-properties-common dirmngr
+# add the signing key (by Michael Rutter) for these repos
+# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc 
+# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+sudo apt install --no-install-recommends r-base
+sudo apt-get install r-base-dev
+sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+```
+
+`$(lsb_release -cs)` = `jammy`, 우분투22.04의 코드네임
+
+2.  rstudio-server 설치
+
+``` powershell
+sudo apt-get install gdebi-core
+wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2023.03.1-446-amd64.deb
+sudo gdebi rstudio-server-2023.03.1-446-amd64.deb
+```
+
+3.  실행
+
+``` powershell
+sudo rstudio-server start
+```
+
+실행 후 `http://{local ip주소}:8787/`에 접속
+
+## 우분투에서 conda 설치
+
+[참고자료](https://linuxhint.com/install-anaconda-ubuntu-22-04/)
+
+1.  system repositories 업데이트
+
+``` powershell
+sudo apt update
+```
+
+2.  curl 패키지 설치
+
+``` powershell
+sudo apt install curl -y
+```
+
+3.  anaconda 설치
+
+/tmp 디렉토리로 이동
+
+``` powershell
+cd /tmp
+```
+
+설치파일 다운로드, [여기서](https://repo.anaconda.com/archive/) 원하는 버전 선택
+
+``` powershell
+curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Linux-x86_64.sh
+```
+
+'SHA-256' 다운로드
+
+``` powershell
+sha256sum anaconda.sh
+```
+
+설치 프로그램 실행
+
+``` powershell
+bash anaconda.sh
+```
+
+4.  .bashrc에 변경된 환경설정 활성화
+
+``` powershell
+source ~/.bashrc
+```
+
+5.  설치 확인
+
+``` powershell
+conda list
+```
+
+6.  기타 설정
+
+-   conda 설정 보기
+
+``` powershell
+conda config --show
+```
+
+-   conda 자동 활성화 모드 on/off
+
+``` powershell
+conda config --set auto_activate_base {True/False}
+```
+
+-   conda 실행/종료
+
+``` powershell
+conda activate
+conda deactivate
+```
+
+## conda에서 설치하고 싶은 패키지 검색
+
+- [conda 패키지 검색](https://anaconda.org/)
