@@ -1,0 +1,8 @@
+---
+title: "Posts"
+listing:
+  contents: posts
+  categories: true
+comments: false
+---
+

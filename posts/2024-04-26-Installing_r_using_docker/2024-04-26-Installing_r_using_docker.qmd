@@ -1,0 +1,60 @@
+---
+title: "docker를 이용하여 Rstudio-server 설치하기"
+description: "windows에서 wsl + docker + Rstudio-server 환경 구축 방법을 정리"
+author: "김경환"
+image: "rstudio_server.svg"
+date: 2024-04-26
+categories:
+  - docker
+  - R
+---
+
+## 요약
+
+1.  [WSL 설명서](https://learn.microsoft.com/ko-kr/windows/wsl/)에 따라 **WSL**과 **Docker Desktop**을 설치
+
+2.  <https://rocker-project.org/images/>에서 이미지 선택 후 pull 및 run
+
+``` {.bash filename="Terminal"}
+docker pull rocker/verse
+```
+
+``` {.bash filename="Terminal"}
+docker run -ti -e PASSWORD=yourpassword -p 8787:8787 rocker/verse
+```
+
+3.  rstudio server 접속(<http://localhost:8787/>), ID는 rstudio.
+
+## WSL 설치
+
+WSL(Linux용 Windows 하위 시스템)은 별도의 가상 머신 또는 이중 부팅 없이 Windows 컴퓨터에서 Linux 환경을 실행할 수 있는 Windows의 기능입니다.
+
+설치를 위해서는 microsoft에서 제공하는 [WSL 설명서](https://learn.microsoft.com/ko-kr/windows/wsl/)에 따라 진행하면 됩니다. 설명서는 WSL 설치 후 추가 설치할 사항들도 제공하고 있습니다. 저는 VS Code 및 Windows 터미널을 설치했습니다.
+
+설명서에 따라 진행하더라도 안되는 경우가 있다면 BIOS 가상화 설정이 되어 있는지 확인합니다.
+
+## docker 설치
+
+docker 설치 또한 [WSL 설명서](https://learn.microsoft.com/ko-kr/windows/wsl/)에 따라 진행하면 됩니다. 설명서에서는 Windows에 Docker desktop 설치를 안내합니다. 설명서에 따라 Docker desktop에서 WSL을 연결하면 WSL에서도 Docker를 사용할 수 있습니다.
+
+## docker hub에서 pull image
+
+docker hub에서 가장 인기 있는 R 관련 image는 [Rocker Project](https://rocker-project.org/) 입니다. Rocker Project에서는 다양한 이미지를 docker hub를 통해 제공하고 있습니다. 필요에 따라 원하는 이미지를 선택하면 됩니다.
+
+`rocker/verse` 이미지를 다운로드 하기 위해 WSL 터미널에서 다음 코드를 실행합니다.
+
+``` {.bash filename="Terminal"}
+docker pull rocker/verse
+```
+
+이후 Docker desktop에서 이미지가 다운로드된 것을 확인합니다.
+
+## 컨테이너 실행
+
+WSL 터미널에서 다음 코드를 통해 컨테이너를 실행합니다.
+
+``` {.bash filename="Terminal"}
+docker run --rm -ti -e PASSWORD=yourpassword -p 8787:8787 rocker/rstudio
+```
+
+컨테이너가 실행되면 <http://localhost:8787/>를 통해 rstudio-server에 접속할 수 있습니다. ID는 rstudio입니다.
